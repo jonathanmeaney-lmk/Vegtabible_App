@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+    
+{% block content %}
+    {% for recipe in salad_recipes  %}
+        <p>{{ recipe.recipe_title }}</p>
+        <p>{{ recipe.description }}</p>
+        <p>{{ recipe.ingredients }}</p>
+    {% endfor %}
+{% endblock %} 
