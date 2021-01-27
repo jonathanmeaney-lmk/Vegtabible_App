@@ -14,3 +14,33 @@
     color: #ffe507;
 }
 
+.buttons {
+    border-radius: 2rem;
+    color: white;
+    box-sizing: border-box;
+}
+
+.buttons:hover {
+    border: solid 2px #ffe507;
+}
+
+a:hover {
+    color: white
+}
+
+.green-buttons {
+    background-color: rgb(4, 173, 4);
+    border: solid 2px rgb(4, 173, 4);
+}
+
+.card-categories {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    color: #343a40;
+}
+
+.card-img-top {
+    max-height: 100%;
+    max-width: 100%
+}
