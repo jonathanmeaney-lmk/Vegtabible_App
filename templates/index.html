@@ -22,7 +22,7 @@
     <div class="row">
         {% for category in categories %}
         <div class="col-sm-6 col-lg-4">
-            <a href="">
+            <a href="/categories/{{ category.category_name }}">
                 <div class="card card-categories">
                     <div class="card-body text-center">
                         <h5 class="card-title">{{ category.category_name|capitalize }}</h5>

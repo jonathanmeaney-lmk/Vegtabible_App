@@ -19,15 +19,16 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+@app.route("/index")
 def index():
     categories = list(mongo.db.categories.find())
     return render_template("index.html", categories=categories)
 
 
-@app.route("/salads")
-def salads():
-    salad_recipes = list(mongo.db.recipes.find())
-    return render_template("salads.html", salad_recipes=salad_recipes)
+@app.route("/categories/<category_name>")
+def category(category_name):
+    recipes = list(mongo.db.recipes.find({"category_name": category_name}))
+    return render_template("category.html", recipes=recipes)
 
 
 if __name__ == "__main__":
