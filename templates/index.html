@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+   
 <div class="container">
     <div class="row">
         <div class="col-12 text-center mt-5">
@@ -16,68 +17,22 @@
         </div>
     </div>
 </div>
+
 <div class="container">
     <div class="row">
-        <div class="col-sm-6 col-lg-4">
-            <a href="">
-                <div class="card card-categories">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Asian</h5>
-                        <img class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-            <a href="">
-                <div class="card card-categories">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">American</h5>
-                        <img class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">
-                    </div>
-                </div>
-            </a>
-        </div>
+        {% for category in categories %}
         <div class="col-sm-6 col-lg-4">
             <a href="">
                 <div class="card card-categories">
                     <div class="card-body text-center">
-                        <h5 class="card-title">Meditteranean</h5>
+                        <h5 class="card-title">{{ category.category_name|capitalize }}</h5>
                         <img class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">
                     </div>
                 </div>
             </a>
         </div>
-        <div class="col-sm-6 col-lg-4">
-            <a href="">
-                <div class="card card-categories">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Salads</h5>
-                        <img class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-            <a href="">
-                <div class="card card-categories">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Sides</h5>
-                        <img class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-            <a href="">
-                <div class="card card-categories">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Other</h5>
-                        <img class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">
-                    </div>
-                </div>
-            </a>
-        </div>
+        {% endfor %}
     </div>
 </div>
-    {% endblock %}
+
+{% endblock %}
