@@ -1,20 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
-
+{% for key in recipe %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center mt-5">
+            <h2>{{ key.recipe_title }}</h2>
+        </div>
+    </div>
+    <div class="row mt-5 description-panel">
+        <div class="col-12 col-md-8">
+            <p>{{ key.description }}</p>
+        </div>
+        <div class="col-12 col-md-4">
+            <p>Time: {{ key.total_time }} mins</p>
+            <p>Level: {{ key.difficulty_level|capitalize }}</p>
+            <p>Category: {{ key.category_name|capitalize }}</p>
+        </div>
+    </div>
+{% endfor %}
+</div>
 
     
-    {{ recipe }}
-    {{ utensils }}
-    {% for step in steps %}
-       <p>{{ step }}</p>
-    {% endfor %}
-
-    {% for ingredient in ingredients %}
-       <p>{{ ingredient }}</p>
-    {% endfor %}
-
-    {% for utensil in utensils %}
-       <p>{{ utensil }}</p>
-    {% endfor %}
-
 {% endblock %}
