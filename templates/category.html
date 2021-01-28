@@ -1,6 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
-    {% for recipe in recipes %}
-        <p>{{ recipe }}</p>
-    {% endfor %}
-{% endblock %} 
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center mt-5">
+            <h2>{{ name|capitalize }}</h2>
+        </div>
+    </div>
+
+{% for recipe in recipes %}
+<div class="accordion" id="accordionExample">
+  <div class="card z-depth-0 bordered">
+    <div class="card-header" id="heading{{ loop.index }}">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+          data-target="#collapse{{ loop.index }}" aria-expanded="false" aria-controls="collapse{{ loop.index }}">
+          {{ recipe.recipe_title }}
+        </button>
+      </h5>
+    </div>
+    <div id="collapse{{ loop.index }}" class="collapse" aria-labelledby="heading{{ loop.index }}" data-parent="#accordionExample">
+      <div class="card-body">
+        {{ recipe.description }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+</div>
+
+{% endblock %}
