@@ -45,8 +45,9 @@ a:hover {
     max-width: 60%
 }
 
-.description-panel {
+.recipe-panel {
     border: 2px solid green;
     border-radius: 5px;
-    padding: 20px
+    padding: 20px;
+    margin: 3px
 }
