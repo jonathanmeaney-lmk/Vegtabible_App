@@ -22,6 +22,7 @@
     <div id="collapse{{ loop.index }}" class="collapse" aria-labelledby="heading{{ loop.index }}" data-parent="#accordionExample">
       <div class="card-body">
         {{ recipe.description }}
+        <a href="/categories/{{ recipe.category_name }}/{{ recipe.recipe_title|replace(' ', '-') }}" class="btn btn-success btn-sm btn-rounded">See Recipe</a>
       </div>
     </div>
   </div>

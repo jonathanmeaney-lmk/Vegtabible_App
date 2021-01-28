@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+    
+    {{ recipe }}
+    {{ utensils }}
+    {% for step in steps %}
+       <p>{{ step }}</p>
+    {% endfor %}
+
+    {% for ingredient in ingredients %}
+       <p>{{ ingredient }}</p>
+    {% endfor %}
+
+    {% for utensil in utensils %}
+       <p>{{ utensil }}</p>
+    {% endfor %}
+
+{% endblock %}

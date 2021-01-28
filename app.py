@@ -32,6 +32,19 @@ def category(category_name):
     return render_template("category.html", recipes=recipes, name=name)
 
 
+@app.route("/categories/<category>/<recipe_url>")
+def recipe(category, recipe_url):
+    recipe_url_formatted = recipe_url.replace("-", " ")
+    recipe = list(mongo.db.recipes.find(
+        {"recipe_title": recipe_url_formatted}))
+    steps = recipe[0]["steps"]
+    ingredients = recipe[0]["ingredients"]
+    utensils = recipe[0]["utensils"]
+    return render_template(
+        "recipe.html", recipe=recipe, steps=steps,
+         ingredients=ingredients, utensils=utensils)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
