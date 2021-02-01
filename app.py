@@ -32,6 +32,15 @@ def category(category_name):
     return render_template("category.html", recipes=recipes, name=name)
 
 
+@app.route("/add_recipe", methods=["GET", "POST"])
+def add_recipe():
+    categories = list(mongo.db.categories.find())
+    levels = list(mongo.db.levels.find())
+    return render_template(
+        "add_recipe.html", categories=categories,
+        levels=levels)
+
+
 @app.route("/categories/<category>/<recipe_url>")
 def recipe(category, recipe_url):
     recipe_url_formatted = recipe_url.replace("-", " ")
