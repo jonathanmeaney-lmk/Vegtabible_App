@@ -77,6 +77,31 @@
                 </select>
             </div>
         </div>
+        <strong><label>Ingredients</label></strong>
+        <div class="row">
+            <div class="col-8 ingredient">
+                <input class="form-control form-control-md shadow" name="ingredient" type="text" placeholder="Ingredient"
+                    required>
+            </div>
+            <div class="col-2">
+                <button class="add-ingr shadow"><i class="fas fa-plus"></i></button>
+            </div>
+        </div>
+        <small class="form-text text-muted mb-4">
+            Click + to add more
+        </small>
+        <strong><label class="mt-1">Steps</label></strong>
+        <div class="row">
+            <div class="col-8 step">
+                <input class="form-control form-control-md shadow" name="step" type="text" placeholder="Step" required>
+            </div>
+            <div class="col-2">
+                <button class="add-step shadow"><i class="fas fa-plus"></i></button>
+            </div>
+        </div>
+        <small class="form-text text-muted mb-4">
+            Click + to add more. No need to put step numbers!
+        </small>
         <div class="row">
             <div class="col-12">
             <button class="btn btn-success my-4 btn-block" type="submit">Add Recipe</button>
@@ -84,6 +109,5 @@
         </div>
     </form>
 </div>
-<!-- Default form register -->
 
 {% endblock %}
