@@ -41,7 +41,9 @@ def add_recipe():
             "description": request.form.get("description"),
             "difficulty_level": request.form.get("level"),
             "total_time": int(request.form.get("time")),
-            "servings": int(request.form.get("servings"))
+            "servings": int(request.form.get("servings")),
+            "ingredients": request.form.getlist("ingredients"),
+            "steps": request.form.getlist("steps")
         }
 
         mongo.db.recipes.insert_one(recipe)
@@ -62,10 +64,9 @@ def recipe(category, recipe_url):
         {"recipe_title": recipe_url_formatted}))
     steps = recipe[0]["steps"]
     ingredients = recipe[0]["ingredients"]
-    utensils = recipe[0]["utensils"]
     return render_template(
         "recipe.html", recipe=recipe, steps=steps,
-         ingredients=ingredients, utensils=utensils)
+         ingredients=ingredients)
 
 
 if __name__ == "__main__":
