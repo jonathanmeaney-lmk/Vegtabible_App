@@ -10,10 +10,10 @@
     </div>
 </div>
 <div class="container">
-    <form class="text-center border grey lighten-4 border-success rounded-lg p-3 p-md-5 shadow mb-4" action="#!">
+    <form class="text-center border grey lighten-4 border-success rounded-lg p-3 p-md-5 shadow mb-4" method="POST" action="{{ url_for('add_recipe') }}">
         <div class="row">
             <div class="col-12">
-                <select class="browser-default custom-select mb-4 shadow" required>
+                <select class="browser-default custom-select mb-4 shadow" name="category_name" required>
                     <option value="" disabled selected>Choose Category</option>
                     {% for category in categories %}
                     <option value="{{ category.category_name }}">{{ category.category_name|capitalize }}</option>
@@ -23,20 +23,20 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <input class="form-control form-control-lg mb-4 shadow" type="text" placeholder="Recipe Title" required>
+                <input class="form-control form-control-lg mb-4 shadow" name="title" type="text" placeholder="Recipe Title" required>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
                 <div class="form-group shadow">
                     <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3"
-                        placeholder="Description..." required></textarea>
+                        placeholder="Description..." name="description" required></textarea>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-12 col-md-4">
-                <select class="browser-default custom-select mb-4 shadow" required>
+                <select class="browser-default custom-select mb-4 shadow" name="servings" required>
                     <option value="" disabled selected>Serves</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -49,7 +49,7 @@
                 </select>
             </div>
             <div class="col-12 col-md-4">
-                <select class="browser-default custom-select mb-4 shadow">
+                <select class="browser-default custom-select mb-4 shadow" name="time">
                     <option value="" disabled selected>Total Time</option>
                     <option value="5">5 mins</option>
                     <option value="10">10 mins</option>
@@ -69,7 +69,7 @@
                 </select>
             </div>
             <div class="col-12 col-md-4">
-                <select class="browser-default custom-select mb-4 shadow">
+                <select class="browser-default custom-select mb-4 shadow" name="level">
                     <option value="" disabled selected>Difficulty Level</option>
                     {% for level in levels %}
                         <option value="{{ level.difficulty_level }}">{{ level.difficulty_level|capitalize }}</option>

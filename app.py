@@ -1,6 +1,6 @@
 import os
 from flask import (
-    Flask,flash, render_template, 
+    Flask, flash, render_template, 
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -34,6 +34,20 @@ def category(category_name):
 
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    if request.method == "POST":
+        recipe = {
+            "category_name": request.form.get("category_name"),
+            "recipe_title": request.form.get("title"),
+            "description": request.form.get("description"),
+            "difficulty_level": request.form.get("level"),
+            "total_time": request.form.get("time"),
+            "servings": request.form.get("servings")
+        }
+
+        mongo.db.recipes.insert_one(recipe)
+        flash("Your recipe was successfully added")
+        return redirect(url_for("add_recipe"))
+
     categories = list(mongo.db.categories.find())
     levels = list(mongo.db.levels.find())
     return render_template(
