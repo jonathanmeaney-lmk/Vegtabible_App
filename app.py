@@ -40,8 +40,8 @@ def add_recipe():
             "recipe_title": request.form.get("title"),
             "description": request.form.get("description"),
             "difficulty_level": request.form.get("level"),
-            "total_time": request.form.get("time"),
-            "servings": request.form.get("servings")
+            "total_time": int(request.form.get("time")),
+            "servings": int(request.form.get("servings"))
         }
 
         mongo.db.recipes.insert_one(recipe)
