@@ -71,7 +71,7 @@ def edit_recipe(recipe_id):
             "steps": request.form.getlist("steps")
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
-        flash("Recipe successfully edited")
+        flash("Recipe successfully updated")
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     steps = recipe["steps"]
@@ -81,6 +81,13 @@ def edit_recipe(recipe_id):
     return render_template(
         "edit_recipe.html", recipe=recipe, categories=categories,
         steps=steps, ingredients=ingredients, levels=levels)
+
+
+@app.route('/delete_recipe/<recipe_id>')
+def delete_recipe(recipe_id):
+    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+    flash("Recipe successfully deleted")
+    return redirect(url_for("index"))
 
 
 @app.route("/categories/<category>/<recipe_url>")
