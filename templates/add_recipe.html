@@ -23,14 +23,14 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <input class="form-control form-control-lg mb-4 shadow" name="title" type="text" placeholder="Recipe Title" required>
+                <input class="form-control form-control-lg mb-4 shadow" minlength="3" name="title" type="text" placeholder="Recipe Title" required>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
                 <div class="form-group shadow">
                     <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3"
-                        placeholder="Description..." name="description" required></textarea>
+                        placeholder="Description..." name="description" minlength="10" required></textarea>
                 </div>
             </div>
         </div>
@@ -79,12 +79,12 @@
         </div>
         <strong><label>Ingredients</label></strong>
         <div class="row">
-            <div class="col-8 ingredient">
-                <input class="form-control form-control-md shadow" name="ingredients" type="text" placeholder="Ingredient"
-                    required>
+            <div class="col-10 ingredient">
+                <input class="form-control form-control-md shadow mb-1" name="ingredients" type="text" placeholder="Ingredient"
+                   minlength="3" required>
             </div>
-            <div class="col-2">
-                <button class="add-ingr shadow"><i class="fas fa-plus"></i></button>
+            <div class="col-1">
+                <button type="button" class="add-ingr shadow"><i class="fas fa-plus"></i></button>
             </div>
         </div>
         <small class="form-text text-muted mb-4">
@@ -92,11 +92,12 @@
         </small>
         <strong><label class="mt-1">Steps</label></strong>
         <div class="row">
-            <div class="col-8 step">
-                <input class="form-control form-control-md shadow" name="steps" type="text" placeholder="Step" required>
+            <div class="col-10 step">
+                <input class="form-control form-control-md shadow mb-1" name="steps" type="text" placeholder="Step" 
+                    minlength="3" required>
             </div>
-            <div class="col-2">
-                <button class="add-step shadow"><i class="fas fa-plus"></i></button>
+            <div class="col-1">
+                <button type="button" class="add-step shadow"><i class="fas fa-plus"></i></button>
             </div>
         </div>
         <small class="form-text text-muted mb-4">

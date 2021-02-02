@@ -10,11 +10,11 @@
 </div>
 <div class="container">
     <div class="row mt-3 justify-content-center">
-        <div class="col-12 col-md-7 recipe-panel offset-1">
+        <div class="col-12 col-md-7 recipe-panel grey lighten-4 shadow offset-1 z-depth-3">
             <h5>Description:</h5>
-            <p>{{ key.description }}</p>
+            <p class="list-group">{{ key.description }}</p>
         </div>
-        <div class="col-12 col-md-3 recipe-panel offset-1">
+        <div class="col-12 col-md-3 recipe-panel grey lighten-4 shadow offset-1">
             <h5>Info:</h5>
             <p>Time: {{ key.total_time }} mins <strong>|</strong> Serves: {{ key.servings }}</p>
             <p>Category: {{ key.category_name|capitalize }} | Level: {{ key.difficulty_level|capitalize }}</p>
@@ -22,17 +22,17 @@
     </div>
     {% endfor %}
     <div class="row justify-content-center">
-        <div class="col-12 col-md-3 recipe-panel offset-1">
+        <div class="col-12 col-md-3 recipe-panel grey lighten-4 shadow offset-1">
             <h5>Ingredients:</h5>
-            <ul class="list-group list-group-flush">
+            <ul class="list-group list-group-flush grey lighten-4 shadow">
             {% for ingredient in ingredients %}
                 <li class="list-group-item">{{ ingredient|capitalize }}</li>
             {% endfor %}
             </ul>
         </div>
-        <div class="col-12 col-md-7 recipe-panel offset-1">
+        <div class="col-12 col-md-7 recipe-panel grey lighten-4 shadow offset-1">
             <h5>Steps:</h5>
-            <ol class="list-group list-group-flush">
+            <ol class="list-group list-group-flush grey lighten-4 shadow">
             {% for step in steps %}
                 <li class="list-group-item">{{ loop.index }}. {{ step|capitalize }}</li>
             {% endfor %}
