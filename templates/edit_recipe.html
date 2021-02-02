@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center mt-5">
+            <h2>Edit Recipe</h2>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <form class="text-center border grey lighten-4 border-success rounded-lg p-3 p-md-5 shadow mb-4" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
+        <div class="row">
+            <div class="col-12">
+                <select class="browser-default custom-select mb-4 shadow" name="category_name" required>
+                    <option value="" disabled selected>Choose Category</option>
+                    {% for category in categories %}
+                        {% if category.category_name == recipe.category_name %}
+                            <option value="{{ category.category_name }}" selected>{{ category.category_name|capitalize }}</option>
+                        {% else %}
+                            <option value="{{ category.category_name }}">{{ category.category_name|capitalize }}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <input class="form-control form-control-lg mb-4 shadow" minlength="3" name="title" type="text" 
+                    value="{{ recipe.recipe_title }}" placeholder="Recipe Title" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group shadow">
+                    <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3"
+                        placeholder="Description..." name="description" minlength="10" 
+                        required>{{ recipe.description }}</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <select class="browser-default custom-select mb-4 shadow" name="servings" required>
+                    <option value="" disabled selected>Serves ({{ recipe.servings }})</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+            <div class="col-12 col-md-4">
+                <select class="browser-default custom-select mb-4 shadow" name="time">
+                    <option value="" disabled selected>Total Time ({{ recipe.total_time }} mins)</option>
+                    <option value="5">5 mins</option>
+                    <option value="10">10 mins</option>
+                    <option value="15">15 mins</option>
+                    <option value="20">20 mins</option>
+                    <option value="25">25 mins</option>
+                    <option value="30">30 mins</option>
+                    <option value="40">40 mins</option>
+                    <option value="50">50 mins</option>
+                    <option value="60">60 mins</option>
+                    <option value="70">70 mins</option>
+                    <option value="80">80 mins</option>
+                    <option value="90">90 mins</option>
+                    <option value="100">100 mins</option>
+                    <option value="110">110 mins</option>
+                    <option value="120">120 mins</option>
+                </select>
+            </div>
+            <div class="col-12 col-md-4">
+                <select class="browser-default custom-select mb-4 shadow" name="level">
+                    <option value="" disabled selected>Difficulty Level</option>
+                    {% for level in levels %}
+                        {% if level.difficulty_level == recipe.difficulty_level %}
+                            <option value="{{ level.difficulty_level }}" selected>{{ level.difficulty_level|capitalize }}</option>
+                        {% else %}
+                            <option value="{{ level.difficulty_level }}">{{ level.difficulty_level|capitalize }}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <strong><label>Ingredients</label></strong>
+        <div class="row">
+            <div class="col-10 ingredient">
+                {% for ingredient in ingredients %}
+                    <input class="form-control form-control-md shadow mb-1" name="ingredients" type="text" placeholder="Ingredient"
+                    minlength="3" value="{{ ingredient }}" required>
+                {% endfor %}
+            </div>
+            <div class="col-1">
+                <button type="button" class="add-ingr shadow"><i class="fas fa-plus"></i></button>
+            </div>
+        </div>
+        <small class="form-text text-muted mb-4">
+            Click + to add more
+        </small>
+        <strong><label class="mt-1">Steps</label></strong>
+        <div class="row">
+            <div class="col-10 step">
+                {% for step in steps %}
+                <input class="form-control form-control-md shadow mb-1" name="steps" type="text" placeholder="Step" 
+                    minlength="3" value="{{ step }}" required>
+                {% endfor %}
+            </div>
+            <div class="col-1">
+                <button type="button" class="add-step shadow"><i class="fas fa-plus"></i></button>
+            </div>
+        </div>
+        <small class="form-text text-muted mb-4">
+            Click + to add more. No need to put step numbers!
+        </small>
+        <div class="row">
+            <div class="col-12">
+            <button class="btn btn-success my-4 btn-block" type="submit">Add Recipe</button>
+            </div> 
+        </div>
+    </form>
+</div>
+
+{% endblock %}

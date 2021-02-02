@@ -57,6 +57,32 @@ def add_recipe():
         levels=levels)
 
 
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    if request.method == "POST":
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "recipe_title": request.form.get("title"),
+            "description": request.form.get("description"),
+            "difficulty_level": request.form.get("level"),
+            "total_time": int(request.form.get("time")),
+            "servings": int(request.form.get("servings")),
+            "ingredients": request.form.getlist("ingredients"),
+            "steps": request.form.getlist("steps")
+        }
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
+        flash("Recipe successfully edited")
+
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    steps = recipe["steps"]
+    ingredients = recipe["ingredients"]
+    levels = list(mongo.db.levels.find())
+    categories = list(mongo.db.categories.find())
+    return render_template(
+        "edit_recipe.html", recipe=recipe, categories=categories,
+        steps=steps, ingredients=ingredients, levels=levels)
+
+
 @app.route("/categories/<category>/<recipe_url>")
 def recipe(category, recipe_url):
     recipe_url_formatted = recipe_url.replace("-", " ")
