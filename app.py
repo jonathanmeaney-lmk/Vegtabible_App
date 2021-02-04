@@ -105,10 +105,10 @@ def delete_recipe(recipe_id):
 @app.route("/categories/<category>/<recipe_url>")
 def recipe(category, recipe_url):
     recipe_url_formatted = recipe_url.replace("-", " ")
-    recipe = list(mongo.db.recipes.find(
-        {"recipe_title": recipe_url_formatted}))
-    steps = recipe[0]["steps"]
-    ingredients = recipe[0]["ingredients"]
+    recipe = mongo.db.recipes.find_one(
+        {"recipe_title": recipe_url_formatted})
+    steps = recipe["steps"]
+    ingredients = recipe["ingredients"]
     return render_template(
         "recipe.html", recipe=recipe, steps=steps,
          ingredients=ingredients)

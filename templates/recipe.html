@@ -2,9 +2,8 @@
 {% block content %}
 <div class="container">
     <div class="row">
-    {% for key in recipe %}
         <div class="col-12 text-center mt-5">
-            <h2>{{ key.recipe_title }}</h2>
+            <h2>{{ recipe.recipe_title }}</h2>
         </div>
     </div>
 </div>
@@ -12,15 +11,14 @@
     <div class="row mt-3 justify-content-center">
         <div class="col-12 col-md-7 recipe-panel grey lighten-4 shadow offset-1 z-depth-3">
             <h5>Description:</h5>
-            <p class="shadow">{{ key.description }}</p>
+            <p class="shadow">{{ recipe.description }}</p>
         </div>
         <div class="col-12 col-md-3 recipe-panel grey lighten-4 shadow offset-1">
             <h5>Info:</h5>
-            <p class="shadow">Time: {{ key.total_time }} mins <strong>|</strong> Serves: {{ key.servings }}
-            Category: {{ key.category_name|capitalize }}<br>Level: {{ key.difficulty_level|capitalize }}</p>
+            <p class="shadow">Time: {{ recipe.total_time }} mins <strong>|</strong> Serves: {{ recipe.servings }}
+            Category: {{ recipe.category_name|capitalize }}<br>Level: {{ recipe.difficulty_level|capitalize }}</p>
         </div>
     </div>
-    {% endfor %}
     <div class="row justify-content-center">
         <div class="col-12 col-md-3 recipe-panel grey lighten-4 shadow offset-1">
             <h5>Ingredients:</h5>
