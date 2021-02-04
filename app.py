@@ -25,11 +25,19 @@ def index():
     return render_template("index.html", categories=categories)
 
 
+@app.route("/search_page")
+def search_page():
+    return render_template("search_page.html")
+
+
 @app.route("/categories/<category_name>")
 def category(category_name):
     name = category_name
     recipes = list(mongo.db.recipes.find({"category_name": category_name}))
     return render_template("category.html", recipes=recipes, name=name)
+
+
+
 
 
 @app.route("/add_recipe", methods=["GET", "POST"])

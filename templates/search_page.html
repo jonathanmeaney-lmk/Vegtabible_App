@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center mt-5">
+            <h2>Search Recipes</h2>
+        </div>
+    </div>
+
+<div class="container">
+    <form class="text-center border grey lighten-4 border-success rounded-lg p-3 p-md-5 shadow mb-4" method="POST"
+        action="{{ url_for('add_recipe') }}">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-6">
+                <input class="form-control form-control-lg mb-2" type="text" placeholder="Search" aria-label="Search">
+            </div>
+            <div class="col-12 col-lg-4">
+                <button class="btn info-color text-white btn-rounded my-md-0 mb-2" type="submit"><i class="fas fa-search left"></i>Search</button>
+                <button class="btn btn-danger text-white btn-rounded my-md-0" type="submit">Reset</button>  
+            </div>
+        </div>
+    </form>
+</div>
+
+{% for recipe in recipes %}
+<div class="accordion mb-1" id="accordionExample">
+  <div class="card z-depth-2 bordered">
+    <div class="card-header" id="heading{{ loop.index }}">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+          data-target="#collapse{{ loop.index }}" aria-expanded="false" aria-controls="collapse{{ loop.index }}">
+          {{ recipe.recipe_title }}
+        </button>
+      </h5>
+    </div>
+    <div id="collapse{{ loop.index }}" class="collapse" aria-labelledby="heading{{ loop.index }}" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>{{ recipe.description }}</p>
+        <a href="/categories/{{ recipe.category_name }}/{{ recipe.recipe_title|replace(' ', '-') }}" class="btn btn-success btn-sm btn-rounded">See Recipe</a>
+        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn text-white info-color btn-sm btn-rounded"><i class="fas fa-edit"></i></a>
+        <button type="button" class="delete-btn btn text-white btn-danger btn-sm btn-rounded"><i class="fas fa-trash-alt"></i></button>
+        <div class="confirm-delete-box ml-2 mt-1">
+                Are you sure you want to delete? <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn btn-sm btn-outline-success">Yes</a> 
+                <button type="button" class="cancel-delete-btn btn btn-sm btn-outline-danger">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+</div>
+
+{% endblock %}
