@@ -13,12 +13,19 @@ h1 {
     background-color: rgba(0, 0, 0, 0.24);
     padding: 30px;
     border-radius: 20px;
-    border: white solid 2px;
+    border: white solid 3px;
 }
 
 .add-button {
    background-color: #13a052;
-   min-width: 130px;
+   min-width: 200px;
+   border-radius: 10px
+}
+
+.search-button {
+    background-color: #dda711;
+    min-width: 200px;
+    border-radius: 10px
 }
 
 .buttons {
