@@ -1,17 +1,24 @@
 .navbar {
-    background-color: green;
+    background-color: #13a052;
 }
 
-.navbar-brand:hover {
-    color: #ffe507;
+.headings {
+    background: url("../images/index-header-image.jpg") no-repeat center;
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link {
-    color: whitesmoke;
+h1 {
+    background-color: rgba(0, 0, 0, 0.24);
+    padding: 30px;
+    border-radius: 20px;
+    border: white solid 2px;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link:hover {
-    color: #ffe507;
+.add-button {
+   background-color: #13a052;
+   min-width: 130px;
 }
 
 .buttons {
