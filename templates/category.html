@@ -22,7 +22,7 @@
     <div id="collapse{{ loop.index }}" class="collapse" aria-labelledby="heading{{ loop.index }}" data-parent="#accordionExample">
       <div class="card-body">
         <p>{{ recipe.description }}</p>
-        <a href="/categories/{{ recipe.category_name }}/{{ recipe.recipe_title|replace(' ', '-') }}" class="btn btn-success btn-sm btn-rounded">See Recipe</a>
+        <a href="/categories/{{ recipe.category_name }}/{{ recipe.recipe_title }}/{{ recipe._id }}" class="btn btn-success btn-sm btn-rounded">See Recipe</a>
         <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn text-white info-color btn-sm btn-rounded"><i class="fas fa-edit"></i></a>
         <button type="button" class="delete-btn btn text-white btn-danger btn-sm btn-rounded"><i class="fas fa-trash-alt"></i></button>
         <div class="confirm-delete-box ml-2 mt-1">

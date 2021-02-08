@@ -3,7 +3,7 @@
 }
 
 .headings {
-    background: url("../images/index-header-image.jpg") no-repeat center;
+    background: url("../images/homepage-header-image.jpg") no-repeat center;
     color: white;
     padding: 40px;
     border-radius: 20px;
@@ -18,45 +18,33 @@ h1 {
 
 .add-button {
    background-color: #13a052;
-   min-width: 200px;
+   min-width: 150px;
    border-radius: 10px
 }
 
 .search-button {
     background-color: #dda711;
-    min-width: 200px;
+    min-width: 150px;
     border-radius: 10px
 }
 
-.buttons {
-    border-radius: 2rem;
-    color: white;
-    box-sizing: border-box;
-}
-
-.buttons:hover {
-    border: solid 2px #ffe507;
-}
-
-a:hover {
-    color: white
-}
-
-.green-buttons {
-    background-color: rgb(4, 173, 4);
-    border: solid 2px rgb(4, 173, 4);
-}
-
 .card-categories {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #f5f5f5;
     color: #343a40;
+    border-radius: 10px;
+}
+
+.card-categories:hover {
+    background-color: #ebebeb
 }
 
 .card-img-top {
-    max-height: 60%;
-    max-width: 60%
+    min-height: 100%;
+    max-height: 193px;
+    max-width: 100%;
+    border-radius: 10px;
 }
 
 .recipe-panel {
