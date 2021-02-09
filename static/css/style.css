@@ -11,13 +11,20 @@
 
 .category-headings {
     color: white; 
-    padding: 40px; 
+    padding: 30px; 
     border-radius: 20px; 
 }
 
 h1 {
     background-color: rgba(0, 0, 0, 0.274);
     padding: 30px;
+    border-radius: 20px;
+    border: white solid 3px;
+}
+
+h2 {
+    background-color: rgba(0, 0, 0, 0.274);
+    padding: 20px;
     border-radius: 20px;
     border: white solid 3px;
 }
@@ -87,13 +94,49 @@ h1 {
 }
 
 .accordion .card {
-    border: 2px solid green;
+    border: 2px solid #13a052;
+    background-color: #f5f5f5;
 }
 
-.btn-link {
-     text-transform: capitalize;
+.accordion .card:hover {
+    border: 2px solid #dda711;
 }
 
-.btn-link:hover {
-     color: green;
+.fa-caret-down {
+    color:#13a052;
+}
+
+@media screen and (max-width: 768px) {
+
+    .category-recipe-titles {
+        font-size: 12px;
+    }
+
+    .accordion .card {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+     .add-button {
+        min-width: 225px;
+        border-radius: 10px
+    }
+
+    .search-button {
+        min-width: 225px;
+    }
+    
+}
+
+@media screen and (max-width: 425px) {
+
+    .add-button {
+        min-width: 225px;
+        border-radius: 10px
+    }
+
+    .search-button {
+        min-width: 225px;
+    }
 }
