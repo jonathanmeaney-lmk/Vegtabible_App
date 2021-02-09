@@ -9,8 +9,14 @@
     border-radius: 20px;
 }
 
+.category-headings {
+    color: white; 
+    padding: 40px; 
+    border-radius: 20px; 
+}
+
 h1 {
-    background-color: rgba(0, 0, 0, 0.24);
+    background-color: rgba(0, 0, 0, 0.274);
     padding: 30px;
     border-radius: 20px;
     border: white solid 3px;
