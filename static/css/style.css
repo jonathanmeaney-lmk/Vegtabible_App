@@ -35,6 +35,20 @@
     border-radius: 20px;
 }
 
+.add-heading {
+    background: url("../images/add-header-image.jpg") no-repeat center;
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.edit-heading {
+    background: url("../images/add-header-image.jpg") no-repeat center;
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+}
+
 h1 {
     background-color: rgba(0, 0, 0, 0.274);
     padding: 30px;
@@ -106,6 +120,11 @@ h4 {
     border-top-right-radius: .125rem;
     border-radius: 10px;
     
+}
+
+.add-edit-form {
+    border: 2px solid #13a052;
+    border-radius: 10px;
 }
 
 .list-group-flush>.list-group-item {
