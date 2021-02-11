@@ -9,6 +9,7 @@
     border-radius: 20px;
 }
 
+
 .category-headings {
     color: white; 
     padding: 30px; 
@@ -16,9 +17,16 @@
 }
 
 .search-heading  {
-    background: url("../images/search-header-image1.jpg") no-repeat center;
+    background: url("../images/search-header-image.jpg") no-repeat center;
     color: white;
     padding: 40px;
+    border-radius: 20px;
+}
+
+.recipe-heading  {
+    background: url("../images/recipe-header-image.jpg") no-repeat center;
+    color: white;
+    padding: 30px;
     border-radius: 20px;
 }
 
@@ -30,10 +38,14 @@ h1 {
 }
 
 h2 {
-    background-color: rgba(0, 0, 0, 0.274);
+    background-color: rgba(0, 0, 0, 0.39);
     padding: 20px;
     border-radius: 20px;
     border: white solid 3px;
+}
+
+h4 {
+    color: #13a052
 }
 
 .add-button {
@@ -76,8 +88,8 @@ h2 {
 }
 
 .recipe-panel {
-    border: 2px solid green;
-    border-radius: 5px;
+    border: 2px solid #13a052;
+    border-radius: 10px;
     padding: 20px;
     margin: 3px
 }
@@ -87,6 +99,12 @@ h2 {
     padding: .75rem 1.25rem;
     border-top-left-radius: .125rem;
     border-top-right-radius: .125rem;
+    border-radius: 10px;
+    
+}
+
+.list-group-flush>.list-group-item {
+    border-radius: 10px
 }
 
 .search-box {
