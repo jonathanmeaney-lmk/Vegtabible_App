@@ -2,6 +2,10 @@
     background-color: #13a052;
 }
 
+.navbar.navbar-dark .navbar-nav .nav-item.active>.nav-link {
+    background-color: #13a052;
+}
+
 .headings {
     background: url("../images/homepage-header-image.jpg") no-repeat center;
     color: white;
@@ -16,10 +20,11 @@
     border-radius: 20px; 
 }
 
+
 .search-heading  {
     background: url("../images/search-header-image.jpg") no-repeat center;
     color: white;
-    padding: 40px;
+    padding: 30px;
     border-radius: 20px;
 }
 
@@ -77,7 +82,7 @@ h4 {
 }
 
 .card-categories:hover {
-    background-color: #ebebeb
+    background-color: white
 }
 
 .card-img-top {
@@ -105,6 +110,14 @@ h4 {
 
 .list-group-flush>.list-group-item {
     border-radius: 10px
+}
+
+.list-group .list-group-item:first-child {
+    border-radius: 10px;
+}
+
+.list-group .list-group-item:last-child {
+   border-radius: 10px;
 }
 
 .search-box {
