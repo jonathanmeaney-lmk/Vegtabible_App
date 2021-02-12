@@ -148,16 +148,41 @@ h4 {
 .add-ingr {
     background-color: #33b5e5;
     border: none;
-    color: white;
-    border-radius: 10px;
+    color: rgb(232, 232, 232);
+    border-radius: 15px;
 }
 
 .add-step {
     background-color: #33b5e5;
     border: none;
-    color: white;
-    border-radius: 10px;
+    color: rgb(232, 232, 232);
+    border-radius: 15px;
 }
+
+.add-ingr:hover {
+    background-color: #58d0fc;
+    color: rgb(232, 232, 232);
+    border-radius: 15px;
+}
+
+.add-step:hover {
+    background-color: #58d0fc;
+    color: rgb(232, 232, 232);
+    border-radius: 15px;
+}
+
+.fa-minus-circle {
+    font-size: 27px;
+    color: #ff4444;
+    background-color: rgb(230, 230, 230);
+}   
+
+.fa-minus-circle:hover {
+    font-size: 27px;
+    color: #ff5e5e;
+    background-color: rgb(230, 230, 230);
+}  
+ 
 
 .confirm-delete-box {
     display: none;
