@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Poppins&display=swap');
+
+.navbar-brand {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 30px;
+}
+
+.navbar-brand:hover {
+    text-decoration: underline;
+}
+
 .navbar {
     background-color: #13a052;
 }
