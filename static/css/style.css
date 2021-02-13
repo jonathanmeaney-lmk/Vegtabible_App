@@ -25,13 +25,11 @@
     border-radius: 20px;
 }
 
-
 .category-headings {
     color: white; 
     padding: 30px; 
     border-radius: 20px; 
 }
-
 
 .search-heading  {
     background: url("../images/search-header-image.jpg") no-repeat center;
@@ -76,7 +74,8 @@ h2 {
 }
 
 h4 {
-    color: #13a052
+    color: #13a052;
+    font-weight: 400;
 }
 
 .add-button {
