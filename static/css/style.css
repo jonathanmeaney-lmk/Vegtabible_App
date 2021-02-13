@@ -6,15 +6,16 @@
 }
 
 .navbar-brand:hover {
-    text-decoration: underline;
+    font-size: 32px;
 }
 
 .navbar {
     background-color: #13a052;
 }
 
-.navbar.navbar-dark .navbar-nav .nav-item.active>.nav-link {
-    background-color: #13a052;
+.nav-link {
+    font-size: 20px;
+    margin-right: 15px
 }
 
 .headings {
