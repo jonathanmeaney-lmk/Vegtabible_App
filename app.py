@@ -61,7 +61,7 @@ def add_recipe():
         }
 
         mongo.db.recipes.insert_one(recipe)
-        flash("Your recipe was successfully added")
+        flash("Your recipe was successfully added!")
         return redirect(url_for("add_recipe"))
 
     categories = list(mongo.db.categories.find())
@@ -85,7 +85,7 @@ def edit_recipe(recipe_id):
             "steps": request.form.getlist("steps")
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
-        flash("Recipe successfully updated")
+        flash("Recipe successfully updated !")
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     steps = recipe["steps"]

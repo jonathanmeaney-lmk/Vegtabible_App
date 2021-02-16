@@ -56,7 +56,7 @@
                 </select>
             </div>
             <div class="col-12 col-md-4">
-                <select class="browser-default custom-select mb-4 shadow" name="time">
+                <select class="browser-default custom-select mb-4 shadow" name="time" required>
                     <option value="" disabled selected>Total Time ({{ recipe.total_time }} mins)</option>
                     <option value="5">5 mins</option>
                     <option value="10">10 mins</option>
@@ -76,7 +76,7 @@
                 </select>
             </div>
             <div class="col-12 col-md-4">
-                <select class="browser-default custom-select mb-4 shadow" name="level">
+                <select class="browser-default custom-select mb-4 shadow" name="level" required>
                     <option value="" disabled selected>Difficulty Level</option>
                     {% for level in levels %}
                         {% if level.difficulty_level == recipe.difficulty_level %}
