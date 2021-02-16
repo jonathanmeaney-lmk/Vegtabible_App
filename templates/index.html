@@ -1,38 +1,47 @@
 {% extends "base.html" %}
 
 {% block content %}
-   
-<div class="container mt-4">
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-8 text-center mt-3 shadow headings z-depth-3">
-            <h1><strong>The Digital Vegetarian Cookbook</strong></h1>
-        </div>
-    </div>
-    <div class="row justify-content-center my-4">
-        <div class="col-12 col-md-3 text-center">
-            <a href="{{ url_for('add_recipe') }}" class="btn add-button text-white my-2"><i class="fas fa-plus left"></i>Add</a>
-        </div>
-        <div class="col-12 col-md-3 text-center">
-            <a href="{{ url_for('search_page') }}" class="btn search-button text-white my-2"><i class="fas fa-search left"></i>Search</a>
-        </div>
-    </div>
-</div>
 
-<div class="container">
-    <div class="row">
-        {% for category in categories %}
-        <div class="col-sm-6 col-lg-4">
-            <a href="/categories/{{ category.category_name }}">
-                <div class="card card-categories">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">{{ category.category_name|capitalize }}</h5>
-                        <img class="card-img-top" src="{{ category.image }}" alt="Card image cap">
-                    </div>
-                </div>
-            </a>
+<section>
+    <div class="container">
+        <!-- Home Page Heading -->
+        <div class="row justify-content-center mt-4">
+            <div class="col-12 col-md-8 text-center mt-3 shadow homepage-heading z-depth-3">
+                <h1><strong>The Digital Vegetarian Cookbook</strong></h1>
+            </div>
         </div>
-        {% endfor %}
+        <!-- Add / Search Buttons -->
+        <div class="row justify-content-center my-4">
+            <div class="col-12 col-md-3 text-center">
+                <a href="{{ url_for('add_recipe') }}" class="btn add-button text-white my-2"><i
+                        class="fas fa-plus left"></i>Add</a>
+            </div>
+            <div class="col-12 col-md-3 text-center">
+                <a href="{{ url_for('search_page') }}" class="btn search-button text-white my-2"><i
+                        class="fas fa-search left"></i>Search</a>
+            </div>
+        </div>
     </div>
-</div>
+</section>
+
+<section>
+    <!-- Categories Section -->
+    <div class="container">
+        <div class="row">
+            {% for category in categories %}
+            <div class="col-sm-6 col-lg-4">
+                <a href="/categories/{{ category.category_name }}">
+                    <div class="card card-categories">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">{{ category.category_name|capitalize }}</h5>
+                            <img class="card-img-top" src="{{ category.image }}" alt="Card image cap">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
 
 {% endblock %}
