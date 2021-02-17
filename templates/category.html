@@ -31,15 +31,15 @@
                             </h6>
                         </div>
                         <!-- Toggle to show/hide Recipe Description Section -->
-                        <div id="collapse{{ loop.index }}" class="collapse" aria-labelledby="heading{{ loop.index }}"
+                        <div id="collapse{{ loop.index }}" class="collapse" aria-labelledby="toggle recipe desicription"
                             data-parent="#accordionExample">
                             <!-- Recipe Description -->
                             <div class="card-body">
                                 <p>{{ recipe.description }}</p>
                                 <!-- See Recipe Button -->
                                 <a href="/categories/{{ recipe.category_name }}/{{ recipe.recipe_title }}/{{ recipe._id }}"
-                                    class="btn btn-success btn-sm btn-rounded">See Recipe <i
-                                        class="fas fa-arrow-right"></i></a>
+                                    class="btn btn-success btn-sm btn-rounded">See Recipe 
+                                    <i class="fas fa-arrow-right"></i></a>
                                 <!-- Edit Recipe Button -->
                                 <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
                                     class="btn text-white info-color btn-sm btn-rounded" aria-label="edit recipe"><i class="fas fa-edit"></i></a>
