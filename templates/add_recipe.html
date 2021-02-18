@@ -98,7 +98,7 @@
                     <!-- Select Level -->
                     <div class="col-12 col-md-4">
                         <select class="browser-default custom-select mb-4 shadow" name="level"
-                            aria-label="select level" >
+                            aria-label="select level">
                             <option value="" disabled selected>Difficulty Level</option>
                             {% for level in levels %}
                             <option value="{{ level.difficulty_level }}">{{ level.difficulty_level|capitalize }}
@@ -131,7 +131,7 @@
                         <input class="form-control form-control-md shadow mb-1" name="steps" type="text"
                             placeholder="Step" minlength="3" aria-label="step input" required>
                     </div>
-                    <!-- Add / Delete Step Buttons -->
+                    <!-- Add / Delete Step Input Buttons -->
                     <div class="col-1">
                         <button type="button" class="add-step shadow mb-1" aria-label="add step">
                             <i class="fas fa-plus"></i></button>
