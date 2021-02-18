@@ -1,45 +1,46 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1 align="center"><strong>Vegtabible App</strong></h1>
 
-Welcome Jonathan,
+[View live project here](https://vegtabible-app.herokuapp.com/index)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+**The recipe bible for vegetarians and "part-time" veggies.**
 
-## Gitpod Reminders
+Vegtabible is digital cookbook app which allows users to upload and share recipes with the Vegtabible community and search all the recipes that have been uploaded by other users. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+The website is aimed at vegetarians but more particularly at the growing number of “part-time” vegetarians – people who are making an effort to eat vegetarian meals a couple of times per week be it for environmental or health reasons, or maybe simply just because they like to. 
 
-`python3 -m http.server`
+The problem for many “part-time” veggies is that they’re repertoire of tasty veggie meals is generally quite limited, in comparison to full-time vegetarians. Vegtabible, therefore, is a platform that allows them to discover new vegetarian meals, as well as upload and share their own discoveries with the community. 
 
-A blue button should appear to click: *Make Public*,
+From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked on our web browsers, screenshots on our phones, or Whatsapp messages, one major issue many homecooks have is that their recipes saved and scattered all over the place. It can be hard find, let alone, remember them all. Vegtabible allows users to store all of their favorite veggie recipes in one place, while also discovering new ones. 
 
-Another blue button should appear to click: *Open Browser*.
+<h2 align="center"><img src="static/screenshots/fullsuite.jpg" style="max-height:400px;"></h2>
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### **Features**:
 
-A blue button should appear to click: *Make Public*,
+- **Search recipes by category:** users can search recipes by categories. Vegtabible has 6 categories: Asian, American, Mediterranean, Sides, Salads and Other.
+- **Search recipes by keyword / title:** users can also use the search function to search recipes using title, keywords or ingredients. 
+- **Create recipe page:** users can add recipes using a simple form which when submitted is added to the chosen category section and is rendered as recipe.html page
+- **Edit recipes:** users can edit and update recipes using a simple form. 
+- **Delete recipes:** users can also delete recipes when necessary, perhaps in the event that a meat-based recipe is accidentally added which is not suitable. 
 
-Another blue button should appear to click: *Open Browser*.
+## **UX**
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+---
 
-## Updates Since The Instructional Video
+### <u>**User Stories**</u>
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- ####  Visitor Goals
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+  - a) As a First Time Visitor, I want to easily understand the main purpose of the website and quickly understand its structure.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+  - b) As a First Time Visitor or Returning Visitor, I want to search recipes available on the website.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+  - c) As a First Time or Returning Visitor, I want to create and add a recipe to the Vegtabible website
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+  - d) As a Returning Visitor, I want to find a particular recipe I had added or seen on a previous visit
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+  - e) As a Returning Visitor, I want to edit/update a recipe I had added on a previous visit.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+  - f) As a Returning Visitor, I want to delete a recipe.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+  - g) As a First Time or Returning Visitor, I want to get in contact with Vegtabible to report an issue, submit a query, or gain more information. 
 
---------
-
-Happy coding!
