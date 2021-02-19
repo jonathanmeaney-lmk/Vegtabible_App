@@ -107,3 +107,83 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
     - MongoDB is used to design and create a database, where all data from the website is stored at the backend.
 - [Balsamiq:](https://balsamiq.com/)
     - Balsamiq was used to create the wireframes during the design process.
+
+## **TESTING**
+---
+
+- The website was tested on Google Chrome, Microsoft Edge, Firefox and Safari browsers.
+- The website was viewed on a variety of devices such as Desktop, Laptop, Tablet, iPhone 6s, iPhone SE, Huawei Y6, Huawei P9 and Samsung Phones.
+- A large amount of testing was done to ensure that all pages were linking correctly, and buttons and forms sections were working as intended (more details below).
+- Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+
+### <u>**User Stories Testing**</u>
+
+####  **<em>a) As a First Time Visitor, I want to easily understand the main purpose of the website and quickly understand its structure.</em>**
+
+- **i)** Upon landing on the site for the first time, the homepage content and structure makes the website's purpose and function immediately clear to the visitor.
+
+- **ii)** Visitors will be first drawn to "The Digital Vegetarian Cookbook" heading, which makes the websites purpose immediatly clear.
+
+- **iii)** Below the heading, the "Add" and "Search" call-to-action buttons makes the website's main functions immediately clear to the visitor.
+
+- **iv)** Below the "Add" and "Search"  buttons, the recipe category cards give the visitor more specific information on the contents of the website and structure of the content. 
+
+- **v)** The Navigation bar the navigation bar also gives the user an overview of the website's simple and clean structure, as well as its main functions, all of which can be easily accessed from the navigation bar at any point on the website. Clicking on the Vegtabible logo will bring them back to the homepage from any point in the website. 
+
+####  **<em>b) As a First Time Visitor or Returning Visitor, I want to search recipes available on the website.</em>**
+
+- **i)** Visitors can search recipes in two ways: searching by category or using the search bar function.
+
+    <img src="static/screenshots/categories.jpg" alt="categories"> <img src="static/screenshots/categories-drop-down-menu.jpg" alt="categories-drop-down-menu"> 
+
+- **ii)** Searching by category: The categories are easily found on the homepage, and can also be reached at any point in the website by clicking on the dropdown menu in the navigation bar. 
+
+- **iii)** When a user clicks on a category, they will be immediately directed to the category landing page, where they will find an easily readable list of all the recipes available under that category.
+
+    <img src="static/screenshots/category-landing-page.jpg" alt="category-landing-page">
+
+- **iv)** Searchbar: Users can access the searchbar function from the homepage by clicking the search button, or at any point in the website by clicking on the search icon in the navigation bar. 
+
+    <img src="static/screenshots/search-button.jpg" alt="search-button"> <img src="static/screenshots/search-navbar-link.jpg" alt="search-navbar-link">
+
+- **v)** Clicking on the search button or the navbar search icon will direct users to the search page. Here they can search recipes by introducing keywords. Retrieved recipes relevant to the keyword are displayed in an easily readible list, whose structure is identical to the category landing page list. In the screenshot example below, the user has typed "burger" into the search input field and then pressed the search button.
+
+    <img src="static/screenshots/search-results.jpg" alt="search-results">
+
+####  **<em>c) As a First Time or Returning Visitor, I want to create and add a recipe to the Vegtabible website</em>**
+
+- **i)** Visitors can reach the 'Add Recipe' page in two ways: clicking on the 'Add' button on the homepage, or clicking the Add (+) icon on the navigation bar at any point in the website.
+   
+    <img src="static/screenshots/add-button.jpg" alt="add-button"> <img src="static/screenshots/add-navbar-link.jpg" alt="add-navbar-link">
+
+- **ii)** Clicking on the 'Add' button or the navbar Add (+) icon will direct users to the 'Add Recipe' page, which includes a simple form to fill, on submit the recipe will be added to database. (This will be covered in more detail in the Functionality Testing Section) 
+
+####  **<em>d) As a Returning Visitor, I want to find a particular recipe I had added or seen on a previous visit</em>**
+
+- **i)** To find a particular recipe, users can use the searchbar function outlines above in section C(iv-v). They can then locate the recipe by typing the keyword or title in the search input.
+
+####  **<em>e) As a Returning Visitor, I want to edit/update a recipe.</em>**
+
+- **i)** Users can first locate the recipe by following the steps outlined in section C (search by category / using searchbar) 
+- **ii)** Users can click on the recipe from the list on Search page or Category landing page, this will open the "description" section, where the 'Edit Recipe' button is clearly visible.
+- **iii)** Alternatively, users can find the 'Edit Recipe' button on the "description" section of the Recipe page.
+- **iv)** Clicking on the 'Edit Recipe' button will direct the user the 'Edit Recipe' page, which includes a simple form that already includes all of the recipe details. Here they can change/update/add/delete any of those details. They can then hit sumbit to confirm the changes to the recipe. (This will be covered in more detail in the Functionality Testing section)
+
+####  **<em>f) As a Returning Visitor, I want to delete a recipe. </em>**
+
+- **i)** Users can first locate the recipe by following the steps outlined in section C (search by category / using searchbar) 
+- **ii)** Users can click on the recipe from the list on Search page or Category landing page, this will open the "description" section, where the 'Delete Recipe' button is clearly visible.
+- **iii)** Alternatively, users can find the 'Delete Recipe' button on the "description" section of the Recipe page.
+- **iv)** Clicking on the 'Delete Recipe' button will prompt the user to confirm or cancel (Yes/No) the recipe deletion. Clicking confirm (Yes) will permantly delete the recipe from the database.
+
+
+### <u>**Functionality Testing**</u>
+
+*The following (all) functionality and interactive features of the entire website were checked to ensure they are working correctly:*
+
+#### ***1. Home Page:***
+
+**Buttons**
+
+- 'Go to Course' button: Border turns yellow when button is hovered over. Button redirects user to 'Course Exercise' page
+- 'Sign Up for Full Course' button: Border turns yellow when button is hovered over. Button redirects user to 'Sign Up' page
