@@ -161,7 +161,7 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
    
     <img src="static/screenshots/add-button.jpg" alt="add-button"> <img src="static/screenshots/add-navbar-link.jpg" alt="add-navbar-link">
 
-- **ii)** Clicking on the 'Add' button or the navbar Add (+) icon will direct users to the 'Add Recipe' page, which includes a simple form to fill out. On submit the recipe will be added to website. (This will be covered in more detail in the Functionality Testing Section) 
+- **ii)** Clicking on the 'Add' button or the navbar Add (+) icon will direct users to the 'Add Recipe' page, which includes a simple form to fill out. On submit the recipe will be added to website. (This will be covered in more detail in the Functionality Testing section) 
 
     <img src="static/screenshots/add-recipe-page.jpg" alt="add-recipe-page">
 
@@ -172,7 +172,7 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 ####  **<em>e) As a Returning Visitor, I want to edit/update a recipe.</em>**
 
 - **i)** Users can first locate the recipe by following the steps outlined in section C (search by category / using searchbar) 
-- **ii)** Users can click on the recipe from the list on Search page or Category landing page, this will open the "description" section, where the 'Edit Recipe' button is clearly visible.
+- **ii)** Users can click on the recipe from the list on the Search page or Category landing page, this will open the "description" section, where the 'Edit Recipe' button is clearly visible.
 
     <img src="static/screenshots/edit-recipe-button1.jpg" alt="edit-recipe-button1"> 
 
@@ -180,7 +180,7 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 
     <img src="static/screenshots/edit-recipe-button2.jpg" alt="edit-recipe-button2">
 
-- **iv)** Clicking on the 'Edit Recipe' button will direct the user the 'Edit Recipe' page, which includes a simple form that already includes all of the recipe details. Here they can change/update/add/delete any of those details. They can then hit sumbit to confirm the changes to the recipe. (This will be covered in more detail in the Functionality Testing section)
+- **iv)** Clicking on the 'Edit Recipe' button will direct the user to the 'Edit Recipe' page, which contains a simple form that already includes all of the recipe details. Here they can change/update/add/delete any of those details. They can then hit sumbit to confirm the changes to the recipe. (This will be covered in more detail in the Functionality Testing section)
 
     <img src="static/screenshots/edit-recipe-page1.jpg" alt="edit-recipe-page2">
 
@@ -189,7 +189,7 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 ####  **<em>f) As a Returning Visitor, I want to delete a recipe. </em>**
 
 - **i)** Users can first locate the recipe by following the steps outlined in section C (search by category / using searchbar) 
-- **ii)** Users can click on the recipe from the list on Search page or Category landing page, this will open the "description" section, where the 'Delete Recipe' button is clearly visible.
+- **ii)** Users can click on the recipe from the list on the Search page or Category landing page, this will open the "description" section, where the 'Delete Recipe' button is clearly visible.
 
     <img src="static/screenshots/edit-recipe-button1.jpg" alt="delete-recipe-button1"> 
         
@@ -200,3 +200,83 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 - **iv)** Clicking on the 'Delete Recipe' button will prompt the user to confirm or cancel (Yes/No) the recipe deletion. Clicking confirm (Yes) will permanently delete the recipe from the database.
 
     <img src="static/screenshots/confirm-delete-section.jpg" alt="confirm-delete-section">
+
+### <u>**Functionality Testing**</u>
+
+*The following (all) functionality and interactive features of the entire website were checked to ensure they are working correctly:*
+
+### ***1. Navigation:***
+
+- The Vegtabible logo: When clicked, it returns users to the homepage
+- Add recipe link: Changes color when hovered over. When clicked, it directs users to the Add Recipe page
+- Search recipe link: Changes color when hovered over. When clicked, it directs users to the Search Recipe page
+- Categories Popup Menu: Changes color when hovered over. When clicked, it opens the popop menu showing the six category links.
+- Category links: Each category link directs the user to the correct chosen category page. 
+- 'Hamburger' toggle button: For smaller screens, the hamburger toggle button appears and, when clicked, shows/hides navbar links.
+
+
+### ***2. Home Page:***
+
+**Buttons**
+
+- 'Add Recipe' button: Box shadow darkens when hovered over. When clicked, it directs users to the Add Recipe page
+- 'Search Button' button: Box shadow darkens when hovered over. When clicked, it directs users to the Search page
+
+**Category Cards**
+
+- Asian Card: Box shadow darkens when hovered over. When clicked, it directs users to the Asian Category landing page
+- American Card: Box shadow darkens when hovered over. When clicked, it directs users to the American Category landing page
+- Mediterranean Card: Box shadow darkens when hovered over. When clicked, it directs users to the Mediterranean Category landing page
+- Salads: Box shadow darkens when hovered over. When clicked, it directs users to the Salads Category landing page
+- Sides: Box shadow darkens when hovered over. When clicked, it directs users to the Sides Category landing page
+- Other: Box shadow darkens when hovered over. When clicked, it directs users to the Other Category landing page
+
+### ***3. Category Landing Page:***
+
+- When user clicks on a category (from the Homepage or from the Navbar popup menu), they are taken to the category.html page which is populated with information from the database on the chosen category: Title and background image is generated; list of recipes under the chosen category are generated from the database. (Two examples are shown below):
+
+    <img src="static/screenshots/asian-category.jpg" alt="asian-category"> <img src="static/screenshots/american-category.jpg" alt="american-category">
+
+- When a recipe panel from the list is hovered over, background turns orange. When clicked, it opens the "description" section. When clicked again, this section is closed. 
+
+    <img src="static/screenshots/recipe-panel-clicked.jpg" alt="recipe-panel-clicked">
+
+- 'See Recipe' button: Box shadown darkens when hovered over. When clicked, it directs users to the Recipe page for the chosen recipe. 
+
+- 'Edit Recipe' button: Box shadown darkens when hovered over. When clicked, it directs users to the Edit Recipe page. 
+
+- 'Delete Recipe' button:
+
+    - Box shadown darkens when hovered over. When clicked, it reveals the confirm delete section. 
+
+        <img src="static/screenshots/confirm-delete-section.jpg" alt="confirm-delete-section"> 
+
+    - Clicking the 'No' button once again hides the "confirm delete" section, to indicate the deleting action has been cancelled
+
+        <img src="static/screenshots/cancel-delete.jpg" alt="cancel-delete">
+    
+    - Clicking 'Yes': redirects users to the hompepage and shows a flash message to confirm the recipe has been deleted; Recipe is deleted from database and no longer appears on the website. 
+
+        <img src="static/screenshots/recipe-deleted.jpg" alt="recipe-deleted">
+
+### ***4. Recipe Page:***
+
+-   When a user clicks on the 'See Recipe' button (either from the list on the Category landing page or a generated list on the Search page), they are taken to the category.html page which is populated with information from the database on the chosen recipe. This information is broken into the four sections: Description, Info, Ingredients, Steps:
+
+    <img src="static/screenshots/recipe-page-example.jpg" alt="recipe-page-example">
+
+- 'Edit Recipe' button: Box shadown darkens when hovered over. When clicked, it directs users to the Edit Recipe page. 
+
+- 'Delete Recipe' button: Box shadown darkens when hovered over. When clicked, it directs users to the Edit Recipe page.
+
+    - Box shadown darkens when hovered over. When clicked, it reveals the confirm delete section. 
+
+        <img src="static/screenshots/confirm-delete-recipe.jpg" alt="confirm-delete-section"> 
+
+    - Clicking the 'No' button once again hides the "confirm delete" section, to indicate the deleting action has been cancelled
+
+        <img src="static/screenshots/cancel-delete-recipe.jpg" alt="cancel-delete">
+    
+    - Clicking 'Yes': redirects users to the hompepage and shows a flash message to confirm the recipe has been deleted; Recipe is deleted from database and no longer appears on the website. 
+
+        <img src="static/screenshots/recipe-deleted.jpg" alt="recipe-deleted">
