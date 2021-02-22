@@ -182,9 +182,9 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 
 - **iv)** Clicking on the 'Edit Recipe' button will direct the user to the 'Edit Recipe' page, which contains a simple form that already includes all of the recipe details. Here they can change/update/add/delete any of those details. They can then hit sumbit to confirm the changes to the recipe. (This will be covered in more detail in the Functionality Testing section)
 
-    <img src="static/screenshots/edit-recipe-page1.jpg" alt="edit-recipe-page2">
+    <img src="static/screenshots/edit-recipe-page1.jpg" alt="edit-recipe-page">
 
-    <img src="static/screenshots/edit-recipe-page2.jpg" alt="edit-recipe-page2">
+    <img src="static/screenshots/edit-recipe-page2.jpg" alt="edit-recipe-page">
 
 ####  **<em>f) As a Returning Visitor, I want to delete a recipe. </em>**
 
@@ -313,3 +313,40 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 - Adding recipe to mongodb will generate the recipe on the relevant category landing page. Clicking 'See Recipe' will generate the recipe.html populated with the recip information stored on mongodb.
 
     <img src="static/screenshots/recipe-generated1.jpg" alt="recipe-on-category-page"> <img src="static/screenshots/recipe-generated2.jpg" alt="recipe-on-recipe-page">
+
+
+### ***5. Edit Recipe Page:***
+
+- Clicking on the 'Edit Recipe' button will direct the user to the 'Edit Recipe' page, which contains a simple form that is already populated with the chosen recipe details.
+
+    <img src="static/screenshots/edit-recipe-example.jpg" alt="edit-recipe-example">
+
+- When a user clicks the 'Add Ingredient' button, an ingredient input is added to the form, allowing users to add as many extra ingredient inputs as desired. 
+
+    <img src="static/screenshots/add-ingredient-button2.jpg" alt="add-ingredient-button">
+
+-  When a user clicks the 'Add Step' button, a step input is added to the form, allowing users to add as many extra step inputs as desired. 
+
+    <img src="static/screenshots/add-step-button2.jpg" alt="add-step-button">
+
+- Clicking the 'Remove Ingredient' button will remove any unwanted extra inputs, if necessary (if user adds more than necessary by mistake).
+
+    <img src="static/screenshots/remove-ingredient-button3.jpg" alt="remove-ingredient-button"> 
+
+- Clicking the 'Remove Step' button will remove any unwanted extra steps, if necessary (if user adds more than necessary by mistake). 
+
+    <img src="static/screenshots/remove-step-button3.jpg" alt="remove-step-button"> 
+
+- To update the recipe, users can make changes to any of the fields in the form. As an example in the screenshots (before and after) below: Servings have been changed from 4 to 6; cooking time from 25 to 30 minutes; no. of sweet potatoes from 2 to 3; and paprika has been added as another ingredient. 
+
+    <img src="static/screenshots/edit-recipe-before.jpg" alt="edit-recipe-before"> <img src="static/screenshots/edit-recipe-after.jpg" alt="edit-recipe-after"> 
+
+- Upon clicking 'Update Recipe' once all desired changes are made, the user will be see a flash message telling them the recipe was successfully updated. The recipe is updated on the Mongodb database.
+
+    <img src="static/screenshots/recipe-udpdated-flash-message.jpg" alt="recipe-udpdated-flash-message"> <img src="static/screenshots/recipe-updated-on-mongodb.jpg" alt="recipe-updated-on-mongodb"> 
+
+- The changes made to the updated recipe are also applied to the recipe page once the recipe has been updated on the mongodb database.
+
+    <img src="static/screenshots/updated-recipe-example.jpg" alt="updated-recipe-example"> 
+
+- Alternatively, upon clicking the 'Cancel Update' update, the user is redirected to the hompeage and no changes are made to the recipe. 
