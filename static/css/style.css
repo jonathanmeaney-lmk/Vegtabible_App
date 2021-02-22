@@ -57,7 +57,7 @@
 }
 
 .edit-heading {
-    background: url("../images/add-header-image.jpg") no-repeat center;
+    background: url("../images/edit-header-image.jpg") no-repeat center;
     color: white;
     padding: 30px;
     border-radius: 20px;
@@ -94,7 +94,7 @@ h4 {
     display: none;
 }
 
-/* ........................ Buttons */
+/* ................................. Buttons */
 
 .add-button {
    background-color: #13a052;
