@@ -261,7 +261,7 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 
 ### ***4. Recipe Page:***
 
--   When a user clicks on the 'See Recipe' button (either from the list on the Category landing page or a generated list on the Search page), they are taken to the category.html page which is populated with information from the database on the chosen recipe. This information is broken into the four sections: Description, Info, Ingredients, Steps:
+-   When a user clicks on the 'See Recipe' button (either from the list on the Category landing page or a generated list on the Search page), they are taken to the recipe.html page which is populated with information from the database on the chosen recipe. This information is broken into the four sections: Description, Info, Ingredients, Steps:
 
     <img src="static/screenshots/recipe-page-example.jpg" alt="recipe-page-example">
 
@@ -280,3 +280,36 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
     - Clicking 'Yes': redirects users to the hompepage and shows a flash message to confirm the recipe has been deleted; Recipe is deleted from database and no longer appears on the website. 
 
         <img src="static/screenshots/recipe-deleted.jpg" alt="recipe-deleted">
+
+
+### ***5. Add Recipe Page:***
+
+-   When a user clicks on the 'Add Recipe' button on the homepage or add (+) icon in the navbar, they are taken to the add recipe page, which contains a form to fill out.
+
+    <img src="static/screenshots/add-recipe-page2.jpg" alt="add-recipe-page">
+
+-  When a user clicks the 'Add Ingredient' button, an ingredient input is added to the form, allowing users to add as many ingredient inputs as desired. 
+
+    <img src="static/screenshots/add-ingredient-button.jpg" alt="add-ingredient-button">
+
+-  When a user clicks the 'Add Step' button, a step input is added to the form, allowing users to add as many step inputs as desired. 
+
+    <img src="static/screenshots/add-step-button.jpg" alt="add-step-button">
+
+- Clicking the 'Remove Ingredient' button will remove any unwanted extra inputs, if necessary (if user adds more than necessary by mistake). 
+
+    <img src="static/screenshots/remove-ingredient-button1.jpg" alt="remove-ingredient-button"> <img src="static/screenshots/remove-ingredient-button2.jpg" alt="remove-ingredient-button">
+
+- Clicking the 'Remove Step' button will remove any unwanted extra steps, if necessary (if user adds more than necessary by mistake). 
+
+    <img src="static/screenshots/remove-step-button1.jpg" alt="remove-step-button"> <img src="static/screenshots/remove-step-button2.jpg" alt="remove-step-button">
+
+- Upon clicking 'Add Recipe' once all required fields are filled, the user will be see a flash message telling them their recipe was successfully added. Their recipe is added to the Mongodb database.
+
+    <img src="static/screenshots/recipe-added-flash-message.jpg" alt="flash-message"> <img src="static/screenshots/recipe-form.jpg" alt="recipe-form"> 
+    
+    <img src="static/screenshots/recipe-on-mongodb.jpg" alt="recipe-on-mongodb">
+
+- Adding recipe to mongodb will generate the recipe on the relevant category landing page. Clicking 'See Recipe' will generate the recipe.html populated with the recip information stored on mongodb.
+
+    <img src="static/screenshots/recipe-generated1.jpg" alt="recipe-on-category-page"> <img src="static/screenshots/recipe-generated2.jpg" alt="recipe-on-recipe-page">
