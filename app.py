@@ -78,6 +78,14 @@ def login():
     return render_template("login.html")
 
 
+@app.route("/logout")
+def logout():
+    # remove user from session cookies
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("index"))
+
+
 @app.route("/search_page")
 def search_page():
     return render_template("search_page.html")
