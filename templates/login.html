@@ -3,12 +3,12 @@
 {% block content %}
 
 <section>
-<!-- Register Heading -->
+<!-- Login Heading -->
 <section>
     <div class="container">
         <div class="row justify-content-center my-4">
-            <div class="col-12 col-md-6 text-center mt-4 register-heading z-depth-3">
-                <h2><strong>Register</strong></h2>
+            <div class="col-12 col-md-6 text-center mt-4 login-heading z-depth-3">
+                <h2><strong>Log In</strong></h2>
             </div>
         </div>
     </div>
@@ -18,7 +18,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <form class="col-12 col-md-10 mt-4 text-center add-edit-form grey lighten-4 p-3 p-md-5 mb-4 z-depth-3"
-                method="POST" action="{{ url_for('register') }}">
+                method="POST" action="{{ url_for('login') }}">
                 <div class="row">
                     <!-- Username -->
                     <div class="col-12">
@@ -36,14 +36,14 @@
                 <div class="row">
                     <!-- Submit -->
                     <div class="col-12">
-                        <button class="btn btn-success my-4 btn-block" type="submit">Register</button>
+                        <button class="btn btn-success my-4 btn-block" type="submit">Log In</button>
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <!-- Sign In Option -->
+                    <!-- Register Option -->
                     <div class="col-12">
                         <p>
-                           <strong>Already Registered? <a href="{{ url_for('login') }}" class="a light-blue-text text-darken-4">Sign In</a></strong>   
+                           <strong>Not Registered Yet? <a href="{{ url_for('register') }}" class="a light-blue-text text-darken-4">Register Here</a></strong>   
                         </p>
                     </div>
                 </div>
