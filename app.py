@@ -165,6 +165,11 @@ def delete_recipe(recipe_id):
     return redirect(url_for("index"))
 
 
+@app.route("/my_recipes")
+def my_recipes():
+    return render_template("my_recipes.html")
+
+
 @app.route("/categories/<category>/<recipe_url>/<recipe_id>")
 def recipe(category, recipe_url, recipe_id):
     recipe = mongo.db.recipes.find_one(
