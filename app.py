@@ -165,9 +165,13 @@ def delete_recipe(recipe_id):
     return redirect(url_for("index"))
 
 
-@app.route("/my_recipes")
-def my_recipes():
-    return render_template("my_recipes.html")
+@app.route("/my_recipes/<username>")
+def my_recipes(username):
+    # grab the session user's username from db
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    user_recipes = list(mongo.db.recipes.find({"added_by": username}))
+    return render_template("my_recipes.html", username=username, user_recipes=user_recipes)
 
 
 @app.route("/categories/<category>/<recipe_url>/<recipe_id>")

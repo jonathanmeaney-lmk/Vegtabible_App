@@ -13,17 +13,66 @@
 </section>
 
 <section>
-   <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-8">
-            <div class="text-center p-4 shadow mb-4 card-categories">
-                <div class="row justify-content-center">
-                    <h5 class="card-title"><strong>Recipes uploaded by jonathanmeaney</strong></h5>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="text-center p-4 shadow mb-4 card-categories">
+                    <div class="row justify-content-center">
+                        <h5 class="card-title"><strong>Recipes uploaded by {{ username }}</strong></h5>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                {% for recipe in user_recipes %}
+            <!-- Recipe Panel -->
+                <div class="accordion mb-1" id="accordionExample">
+                    <div class="card z-depth-2 bordered">
+                        <div class="card-header" id="heading{{ loop.index }}" data-toggle="collapse"
+                            data-target="#collapse{{ loop.index }}" aria-expanded="false"
+                            aria-controls="collapse{{ loop.index }}">
+                        <!-- Recipe Title -->
+                            <h6 class="mb-0 collapsed category-recipe-titles">
+                                {{ recipe.recipe_title|title }} <i class="fas fa-caret-down left"></i>
+                            </h6>
+                        </div>
+                        <!-- Toggle to show/hide Recipe Description Section -->
+                        <div id="collapse{{ loop.index }}" class="collapse" aria-labelledby="toggle recipe desicription"
+                            data-parent="#accordionExample">
+                            <!-- Recipe Description -->
+                            <div class="card-body">
+                                <p>{{ recipe.description }}</p>
+                                <!-- See Recipe Button -->
+                                <a href="/categories/{{ recipe.category_name }}/{{ recipe.recipe_title }}/{{ recipe._id }}"
+                                    class="btn btn-success btn-sm btn-rounded">See Recipe 
+                                    <i class="fas fa-arrow-right"></i></a>
+                                <!-- Edit Recipe Button -->
+                                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+                                    class="btn text-white info-color btn-sm btn-rounded"><i class="fas fa-edit"></i> EDIT</a>
+                                <!-- Delete Recipe Button -->
+                                <button type="button" class="delete-btn btn text-white btn-danger btn-sm btn-rounded"><i
+                                        class="fas fa-trash-alt" aria-label="delete recipe"></i> DELETE</button>
+                                <!-- Confirm Delete Yes / No Buttons -->
+                                <div class="confirm-delete-box ml-2 mt-1">
+                                    Are you sure you want to delete? 
+                                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+                                        class="btn btn-sm btn-outline-success">Yes</a>
+                                    <button type="button" class="cancel-delete-btn btn btn-sm btn-outline-danger">No</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 </section>
 
 {% endblock %}
