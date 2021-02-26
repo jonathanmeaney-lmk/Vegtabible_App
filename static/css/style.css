@@ -4,11 +4,11 @@
 
 .navbar-brand {
     font-family: 'Hammersmith One', sans-serif;
-    font-size: 30px;
+    font-size: 32px;
 }
 
 .navbar-brand:hover {
-    font-size: 32px;
+    font-size: 35px;
 }
 
 .navbar {
