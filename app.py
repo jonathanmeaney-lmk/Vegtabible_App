@@ -118,7 +118,8 @@ def add_recipe():
             "total_time": int(request.form.get("time")),
             "servings": int(request.form.get("servings")),
             "ingredients": request.form.getlist("ingredients"),
-            "steps": request.form.getlist("steps")
+            "steps": request.form.getlist("steps"),
+            "added_by": session["user"]
         }
 
         mongo.db.recipes.insert_one(recipe)
@@ -143,7 +144,8 @@ def edit_recipe(recipe_id):
             "total_time": int(request.form.get("time")),
             "servings": int(request.form.get("servings")),
             "ingredients": request.form.getlist("ingredients"),
-            "steps": request.form.getlist("steps")
+            "steps": request.form.getlist("steps"),
+            "added_by": session["user"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe successfully updated !")
