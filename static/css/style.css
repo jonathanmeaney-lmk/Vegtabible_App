@@ -104,7 +104,8 @@ h4 {
 }
 
 .flash-message {
-    color: white;
+    color: #343a40;
+    background-color: #f5f5f5;
     border-radius: 10px;
 }
 

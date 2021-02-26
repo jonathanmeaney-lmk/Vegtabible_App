@@ -62,7 +62,7 @@ def login():
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(
+                    flash("Welcome, {} let's get cooking!".format(
                         request.form.get("username")))
                     return redirect(url_for(
                         "index", username=session["user"]))
@@ -173,7 +173,9 @@ def my_recipes(username):
     firstname = mongo.db.users.find_one(
         {"username": session["user"]})["firstname"]
     user_recipes = list(mongo.db.recipes.find({"added_by": username}))
-    return render_template("my_recipes.html", firstname=firstname, user_recipes=user_recipes)
+    return render_template(
+        "my_recipes.html", firstname=firstname,
+        user_recipes=user_recipes)
 
 
 @app.route("/categories/<category>/<recipe_url>/<recipe_id>")
@@ -184,7 +186,7 @@ def recipe(category, recipe_url, recipe_id):
     ingredients = recipe["ingredients"]
     return render_template(
         "recipe.html", recipe=recipe, steps=steps,
-         ingredients=ingredients)
+        ingredients=ingredients)
 
 
 if __name__ == "__main__":
