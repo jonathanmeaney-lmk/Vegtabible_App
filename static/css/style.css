@@ -114,6 +114,11 @@ h4 {
     font-weight: 400;
 }
 
+h5 {
+    color: #13a052;
+    font-weight: 400;
+}
+
 .flash-message {
     color: #343a40;
     background-color: #f5f5f5;
@@ -281,6 +286,12 @@ h4 {
     .accordion .card {
         font-size: 12px;
     }
+
+    h5  {
+        color: #13a052;
+        font-weight: 400;
+        font-size: 15px;
+    }
 }
 
 
@@ -308,6 +319,6 @@ h4 {
     }
 
     .flash-message {
-        font-size: 18px;
+        font-size: 15px;
     }
 }

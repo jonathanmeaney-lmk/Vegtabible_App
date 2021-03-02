@@ -102,7 +102,7 @@ def contact():
 def search():
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
-    return render_template("search_page.html", recipes=recipes)
+    return render_template("search_page.html", recipes=recipes, query=query)
 
 
 @app.route("/categories/<category_name>")
