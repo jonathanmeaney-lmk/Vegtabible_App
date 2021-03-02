@@ -64,28 +64,28 @@
 }
 
 .register-heading{
-    background: url("../images/edit-header-image.jpg") no-repeat center;
+    background: url("../images/register-header-image.jpg") no-repeat center;
     color: white;
     padding: 30px;
     border-radius: 20px;
 }
 
 .login-heading {
-    background: url("../images/edit-header-image.jpg") no-repeat center;
+    background: url("../images/login-header-image.jpg") no-repeat center;
     color: white;
     padding: 30px;
     border-radius: 20px;
 }
 
 .profile-heading {
-    background: url("../images/search-header-image.jpg") no-repeat center;
+    background: url("../images/my-recipes-header-image.jpg") no-repeat center;
     color: white;
     padding: 30px;
     border-radius: 20px;
 }
 
 .contact-heading {
-    background: url("../images/search-header-image.jpg") no-repeat center;
+    background: url("../images/contact-header-images.jpg") no-repeat center;
     color: white;
     padding: 30px;
     border-radius: 20px;
