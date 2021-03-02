@@ -46,14 +46,14 @@
                         </li>
                         <!-- Add Recipe -->
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('add_recipe') }}" aria-label="add recipe"><i class="fas fa-plus left"></i></a>
+                            <a class="nav-link" href="{{ url_for('add_recipe') }}" aria-label="add recipe"><span class="d-inline d-lg-none">Add Recipe </span><i class="fas fa-plus left"></i></a>
                         </li>
                         {% endif %}
                         {% if not session.user %}
                         <!-- Login / Register  -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-9" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false" aria-label="user pop menu"><i class="fas fa-sign-in-alt"></i></a>
+                                aria-haspopup="true" aria-expanded="false" aria-label="user pop menu"><span class="d-inline d-lg-none">Log In/Register </span><i class="fas fa-sign-in-alt"></i></a>
                             <!-- Popup Menu Items-->
                             <div class="dropdown-menu dropdown-pink" aria-labelledby="navbarDropdownMenuLink-7">
                                 <a class="dropdown-item" href="{{ url_for('login') }}">Log In</a>
@@ -63,14 +63,16 @@
                         {% endif %} 
                         <!-- Search Recipe -->
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('search_page') }}" aria-label="search recipe"><i class="fas fa-search left"></i></a>
+                            <a class="nav-link" href="{{ url_for('search_page') }}" aria-label="search recipe"><span class="d-inline d-lg-none">Search </span><i class="fas fa-search left"></i></a>
                         </li>
                         <!-- Category Popup Menu -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-7" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false" aria-label="categories pop-up menu"><i class="fas fa-th"></i></a>
+                                aria-haspopup="true" aria-expanded="false" aria-label="categories pop-up menu"><span class="d-inline d-lg-none">Categories </span><i class="fas fa-th"></i></a>
                             <!-- Popup Menu Items-->
                             <div class="dropdown-menu dropdown-pink" aria-labelledby="navbarDropdownMenuLink-7">
+                                <div class="dropdown-item">Categories</div>
+                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="/categories/asian">Asian</a>
                                 <a class="dropdown-item" href="/categories/american">American</a>
                                 <a class="dropdown-item" href="/categories/mediterranean">Mediterranean</a>
@@ -80,7 +82,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('contact') }}" aria-label="contact"><i class="fa fa-comment-alt"></i></a>
+                            <a class="nav-link" href="{{ url_for('contact') }}" aria-label="contact"><span class="d-inline d-lg-none">Contact </span><i class="fa fa-comment-alt"></i></a>
                         </li>
                     </ul>
                 </div>
