@@ -218,7 +218,7 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 
 - **iv)** From here they can view, edit or delete any of the recipes they have added to the website.
 
-####  **<em>e) As a Returning Registered Visitor, I want to edit/update a recipe.</em>**
+####  **<em>g) As a Returning Registered Visitor, I want to edit/update a recipe.</em>**
 
 <em> Users can only edit recipes that they themselves have added. They will not have access to the edit function for recipes added by other users.</em>
 
@@ -232,7 +232,7 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 
 <em> Aside from the My Recipes page, users can access the 'Edit Recipe' button from the Search, Category Landing or Recipe page. However the button will only appear for recipes added by the logged in user to ensure that they can only edit their own recipes and not those added by other users.</em>
 
-####  **<em>f) As a Returning Registered Visitor, I want to delete a recipe. </em>**
+####  **<em>h) As a Returning Registered Visitor, I want to delete a recipe. </em>**
 
 <em> Users can only delete recipes that they themselves have added. They will not have access to the delete function for recipes added by other users.</em>
 
@@ -243,6 +243,13 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
     <img src="static/screenshots/confirm-delete-section.jpg" alt="confirm-delete-section">
 
 <em> Aside from the My Recipes page, users can access the 'Edit Recipe' button from the Search, Category Landing or Recipe page. However the button will only appear for recipes added by the logged in user to ensure that they can only edit their own recipes and not those added by other users.</em>
+
+####  **<em>i) As a First Time or Returning Visitor, I want to get in contact with Vegtabible to report an issue, submit a query, or gain more information. </em>**
+
+- **i)** Registered and non-registered users can access the contact page by clicking on the 'Message' icon on the navbar.
+- **ii)** Clicking the 'Message' Icon directs them to the contact page, where they can find the email address to get in touch.
+- **iii)** Clicking on the email address will automatically open a blank email on the users email app with the Vegtabible address already filled 
+
 
 ### <u>**Functionality Testing**</u>
 
