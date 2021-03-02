@@ -7,6 +7,10 @@
     font-size: 32px;
 }
 
+.accordion {
+    cursor: pointer; 
+}
+
 .navbar-brand:hover {
     font-size: 35px;
 }
