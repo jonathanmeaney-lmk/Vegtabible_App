@@ -117,7 +117,7 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 ---
 
 - The website was tested on Google Chrome, Microsoft Edge, Firefox and Safari browsers.
-- The website was viewed on a variety of devices such as Desktop, Laptop, Tablet, iPhone 6s, iPhone SE, Huawei Y6, Huawei P9 and Samsung Phones.
+- The website was viewed on a variety of devices such as Desktop, Laptop, Tablet, iPhone 6s, iPhone SE, Huawei Y6, Huawei P9 and Samsung Phones. The website was found to be responsive across all of these devices. 
 - A large amount of testing was done to ensure that all pages were linking correctly, and buttons and forms sections were working as intended (more details below).
 - Friends, family members and fellow Code Institute students were asked to review the site and documentation to point out any bugs and/or user experience issues.
 
@@ -133,11 +133,13 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 
 - **iv)** Below the 'Log In' and 'Register' buttons, the recipe category cards give the visitor more specific information on the contents of the website and how that content is structured. 
 
-     <img src="static/screenshots/homepage.jpg" alt="homepage">
+     <img src="static/screenshots/homepage1.jpg" alt="homepage">
 
 - **v)** Once the user has registered (as outlined in section C below), the 'Add' and 'Search' buttons appear below the Homepage heading, while the 'Add' and 'User Profile' sections are added to the navigation bar, which gives them a full overview of the website's structure. 
 
 - **vi)** The navigation bar gives the user an overview of the website's simple and clean structure, as well as its main functions, all of which can be easily accessed from the navigation bar at any point on the website. Clicking on the 'Vegtabible' logo will bring users back to the Homepage from any point in the website. 
+
+    <img src="static/screenshots/homepage2.jpg" alt="homepage">
 
 
 ####  **<em>b) As a First Time Visitor or Returning Visitor, I want to search recipes available on the website.</em>**
@@ -170,33 +172,57 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 
 - **i)** Upon landing on the Homepage, a 'Register' call-to-action button is clearly visible in a prominent position on the page.
 
+    <img src="static/screenshots/register-button.jpg" alt="register-button">
+
 - **ii)** Should visitors choose to browse recipes before registering, they can also reach the Register page from the navbar link at any point on the website.
+
+    <img src="static/screenshots/register-link.jpg" alt="register-link">
 
 - **iii)** Clicking on the 'Register' call-to-action button or on the 'Register' navbar link will direct users to the Register page.
 
 - **iv)** Users are requested to input some basic information (username, first name and lastname) and choose a password. They will require the username and password to log in once registered. Users are prompted to choose a minimum of 5 characters for their username and password. If they try to submit a username and/or password of less than 5 characters, they will not be allowed to proceed with registration and will be prompted to address the error. If they leave any field empty, they will also unable to proceed with registration and will be prompted to fill out the relevant empty field.
 
+    <img src="static/screenshots/register-page.jpg" alt="register-page">
+
 - **v)** Once users have filled out the form correctly and clicked 'Register', they will be redirected to the Homepage and a flash message informs them that the registration has been successful. From this point they will be able to access the 'Add Recipe' function and access the 'User Profile' section of the navbar.
+
+    <img src="static/screenshots/registration-successful.jpg" alt="registration-successful">
 
 - **vi)** If the user chooses a username that already exists for another registered user, they will be unable to proceed with the registration. A flash message will inform them that the "Username already exists", prompting them to choose another username.
 
+    <img src="static/screenshots/username-exists.jpg" alt="username-exists">
+
 - **vii)** If the user has already registered and has landed on the Register page (perhaps by mistake), they are prompted with a message that will redirect them to the Log In page.
+
+    <img src="static/screenshots/login-prompt.jpg" alt="login-prompt">
 
 ####  **<em>d) As a Returning Registered Visitor, I want to log in to the Vegtabible website to gain access to the website's full functionality.</em>**
 
 - **i)** Upon landing on the homepage, a 'Log In' call-to-action button is clearly visible in a prominent position on the page.
 
+    <img src="static/screenshots/login-button.jpg" alt="login-button">
+
 - **ii)** Should visitors choose to browse recipes before logging in, they can also reach the Log In page from the navbar link at any point on the website.
 
+    <img src="static/screenshots/register-link.jpg" alt="login-link">
+
 - **iii)** Clicking on the 'Log In' call-to-action button or on the 'Log In' navbar link will direct users to the Log In page.
+
+    <img src="static/screenshots/login-page.jpg" alt="login-page">
 
 - **iv)** Users are requested to input their username and password (as chosen during the registration process outlined above). 
 
 - **v)** Once they input the correct username and password, they will be redirected to the Homepage and flash message informs them that they have logged in successfully.
 
+    <img src="static/screenshots/login-successful.jpg" alt="login-successful">
+
 - **vi)** If the user inputs an incorrect username and/or password, they will be unable to proceed with loggin in. A flash message will inform them that they have inputted an "Incorrect Username and/or Password", prompting them to resubmit their credentials again.
 
+    <img src="static/screenshots/incorrect-password.jpg" alt="incorrect-password">
+
 - **vii)** If the user has landed on the Log In page but has not yet registered, they are prompted with a message that will redirect them to the Register page.
+
+    <img src="static/screenshots/register-prompt.jpg" alt="register-prompt">
 
 ####  **<em>e) As a Registered User, I want to create and add a recipe to the Vegtabible website</em>**
 
@@ -214,7 +240,11 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 
 - **ii)** Users can easily access the My Recipes page by clicking on the 'Profile' link in the navbar.
 
+    <img src="static/screenshots/my-recipes-link.jpg" alt="my-recipes-link"> 
+
 - **iii)** Clicking on the 'My Recipes' link will bring them to their My Recipes page. This contains a list of all the recipes they added to the website.
+
+    <img src="static/screenshots/my-recipes-page.jpg" alt="my-recipes-page"> 
 
 - **iv)** From here they can view, edit or delete any of the recipes they have added to the website.
 
@@ -222,34 +252,50 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 
 <em> Users can only edit recipes that they themselves have added. They will not have access to the edit function for recipes added by other users.</em>
 
-- **i)** Users can see all of their recipes by going to their My Recipes page. Clicking on a recipe in the list will open the "description" section, which contains the 'Edit Recipe' button. The 'Edit Recipe' button also appears on the Recipe page for any recipes added by the user.
+- **i)** Users can see all of their recipes by going to their My Recipes page (outlined immediately above). Clicking on a recipe in the list will open the "description" section, which contains the 'Edit Recipe' button. The 'Edit Recipe' button also appears on the Recipe page for any recipes added by the user.
 
-- **ii)** Clicking on the 'Edit Recipe' button will direct the user to the Edit Recipe page, which contains a simple form that already includes all of the recipe details. Here they can change/update/add/delete any of those details. Once they submit, a flash message will appear to inform that the changes have been saved correctly (The Edit Recipe function will be covered in more detail in the Functionality Testing section below)
+    <img src="static/screenshots/my-recipes-list-description.jpg" alt="my-recipes-list-description"> <img src="static/screenshots/recipe-page-edit-del.jpg" alt="recipe-page-edit-del">
+
+- **ii)** Clicking on the 'Edit Recipe' button will direct the user to the Edit Recipe page, which contains a simple form that already includes all of the recipe details. Here they can change/update/add/delete any of those details. Once they submit, a flash message will appear to inform that the changes have been saved correctly. (The Edit Recipe function will be covered in more detail in the Functionality Testing section below)
 
     <img src="static/screenshots/edit-recipe-page1.jpg" alt="edit-recipe-page">
 
     <img src="static/screenshots/edit-recipe-page2.jpg" alt="edit-recipe-page">
 
-<em> Aside from the My Recipes page, users can access the 'Edit Recipe' button from the Search, Category Landing or Recipe page. However the button will only appear for recipes added by the logged in user to ensure that they can only edit their own recipes and not those added by other users.</em>
+- **iii)**  Aside from the My Recipes page, users can access the 'Edit Recipe' button from the Search, Category Landing or Recipe page. However the button will only appear for recipes added by the logged in user to ensure that they can only edit their own recipes and not those added by other users.</em>
+
+    <img src="static/screenshots/user-only.jpg" alt="user-only">
 
 ####  **<em>h) As a Returning Registered Visitor, I want to delete a recipe. </em>**
 
 <em> Users can only delete recipes that they themselves have added. They will not have access to the delete function for recipes added by other users.</em>
 
 - **i)** Users can see all of their recipes by going to their My Recipes page. Clicking on a recipe in the list will open the "description" section, which contains the 'Delete Recipe' button. The 'Delete Recipe' button also appears on the Recipe page for any recipes added by the user.
-- **ii)** Users can click on the recipe from the list on the Search page or Category landing page, this will open the "description" section, where the 'Delete Recipe' button is clearly visible.
-- **iii)** Clicking on the 'Delete Recipe' button will prompt the user to confirm or cancel (Yes/No) the recipe deletion. Clicking confirm (Yes) will permanently delete the recipe from the database.
+
+     <img src="static/screenshots/my-recipes-list-description.jpg" alt="my-recipes-list-description"> <img src="static/screenshots/recipe-page-edit-del.jpg" alt="recipe-page-edit-del">
+
+- **ii)** Clicking on the 'Delete Recipe' button will prompt the user to confirm or cancel (Yes/No) the recipe deletion. Clicking confirm (Yes) will permanently delete the recipe from the database.
 
     <img src="static/screenshots/confirm-delete-section.jpg" alt="confirm-delete-section">
 
-<em> Aside from the My Recipes page, users can access the 'Edit Recipe' button from the Search, Category Landing or Recipe page. However the button will only appear for recipes added by the logged in user to ensure that they can only edit their own recipes and not those added by other users.</em>
+- **iii)** Aside from the My Recipes page, users can access the 'Delete Recipe' button from the Search, Category Landing or Recipe page. However the button will only appear for recipes added by the logged in user to ensure that they can only edit their own recipes and not those added by other users.</em>
+
+    <img src="static/screenshots/user-only.jpg" alt="user-only">
+
 
 ####  **<em>i) As a First Time or Returning Visitor, I want to get in contact with Vegtabible to report an issue, submit a query, or gain more information. </em>**
 
 - **i)** Registered and non-registered users can access the contact page by clicking on the 'Message' icon on the navbar.
-- **ii)** Clicking the 'Message' Icon directs them to the contact page, where they can find the email address to get in touch.
-- **iii)** Clicking on the email address will automatically open a blank email on the users email app with the Vegtabible address already filled 
 
+    <img src="static/screenshots/contact-link.jpg" alt="contact-link">
+
+- **ii)** Clicking the 'Message' Icon directs them to the contact page, where they can find the email address to get in touch.
+
+    <img src="static/screenshots/contact-page.jpg" alt="contact-page">
+
+- **iii)** Clicking on the email address will automatically open a blank email on the users email app with the Vegtabible address already filled (provided they have this function setup on their device).
+
+    <img src="static/screenshots/email-send.jpg" alt="email-send">
 
 ### <u>**Functionality Testing**</u>
 
