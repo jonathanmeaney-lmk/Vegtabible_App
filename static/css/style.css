@@ -84,6 +84,13 @@
     border-radius: 20px;
 }
 
+.contact-heading {
+    background: url("../images/search-header-image.jpg") no-repeat center;
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+}
+
 h1 {
     background-color: rgba(0, 0, 0, 0.274);
     padding: 30px;
