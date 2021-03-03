@@ -50,7 +50,7 @@
                                         class="fas fa-trash-alt left" aria-label="delete recipe"></i>DELETE</button>
                                 <!-- Confirm Delete Yes / No Buttons -->
                                 <div class="confirm-delete-box ml-2 mt-1">
-                                    Are you sure you want to delete? 
+                                    Are you sure you want to delete? <br class="d-block d-lg-none">
                                     <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
                                         class="btn btn-sm btn-outline-success">Yes</a>
                                     <button type="button" class="cancel-delete-btn btn btn-sm btn-outline-danger">No</button>
