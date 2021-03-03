@@ -160,7 +160,7 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 
 - **v)** Clicking on the 'Search' button or the 'Search' navbar link will direct users to the Search page. Here they can search recipes by inputting keywords. Retrieved recipes relevant to the keyword are displayed in an easily readible list, whose structure is identical to the category landing page list. In the screenshot example below, the user has typed "burger" into the search input field and then pressed the 'Search' button.
 
-    <img src="static/screenshots/search-results.jpg" alt="search-results">
+    <img src="static/screenshots/search-results-burger.jpg" alt="search-results-burger">
 
 - **vi)** When a user clicks on a recipe from the list on the Search page or Category landing page, it reveals the recipe's "description" section, which includes the 'See Recipe' button (the 'Edit' and 'Delete' buttons only appear for those recipes that have been added by the logged in user, see more in sections G and H below). Clicking the 'See Recipe' button will bring them directly to the Recipe page, which is broken into four sections: Description, Info, Ingredient, Steps. 
 
@@ -299,33 +299,39 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 
 ### <u>**Functionality Testing**</u>
 
-*The following (all) functionality and interactive features of the entire website were checked to ensure they are working correctly:*
+*The following functionality and interactive features of the entire website were checked to ensure they are working correctly:*
 
-### ***1. Navigation:***
+### ***1. Navigation Bar:***
 
-- The Vegtabible logo: When clicked, it returns users to the homepage
-- Add recipe link: Changes color when hovered over. When clicked, it directs users to the Add Recipe page
-- Search recipe link: Changes color when hovered over. When clicked, it directs users to the Search Recipe page
+- Vegtabible logo: When clicked, it returns users to the homepage
+- Login/Register Popup Menu: Changes color when hovered over. When clicked, it opens the popop menu showing the Login/Register links.
+- Login/Register links: Log In link directs users Log In page when clicked. Register link directs users to Log In page when clicked.
+- 'Search Recipe' link: Changes color when hovered over. When clicked, it directs users to the Search Recipe page.
+- 'Add Recipe' link: Changes color when hovered over. When clicked, it directs users to the Add Recipe page.
 - Categories Popup Menu: Changes color when hovered over. When clicked, it opens the popop menu showing the six category links.
 - Category links: Each category link directs the user to the correct chosen category page. 
-- 'Hamburger' toggle button: For smaller screens, the hamburger toggle button appears and, when clicked, shows/hides navbar links.
+- Contact link: Changes color when hovered over. When clicked, it directs users to the Contact page.
+- 'Hamburger' toggle button: For smaller screens, the hamburger toggle button appears and, when clicked, shows/hides navbar links. Text appears accompanying link icons to improve UX on smaller screens.
 
+    <img src="static/screenshots/navbar-small-screens.jpg" alt="navbar-small-screens">
 
 ### ***2. Home Page:***
 
 **Buttons**
 
-- 'Add Recipe' button: Box shadow darkens when hovered over. When clicked, it directs users to the Add Recipe page
-- 'Search Button' button: Box shadow darkens when hovered over. When clicked, it directs users to the Search page
+- 'Log In' button: Box shadow darkens when hovered over. When clicked, it directs users to the Log In page.
+- 'Register' button: Box shadow darkens when hovered over. When clicked, it directs users to the Register page.
+- 'Add Recipe' button: Box shadow darkens when hovered over. When clicked, it directs users to the Add Recipe page.
+- 'Search Recipe' button: Box shadow darkens when hovered over. When clicked, it directs users to the Search page.
 
 **Category Cards**
 
-- Asian Card: Box shadow darkens when hovered over. When clicked, it directs users to the Asian Category landing page
-- American Card: Box shadow darkens when hovered over. When clicked, it directs users to the American Category landing page
-- Mediterranean Card: Box shadow darkens when hovered over. When clicked, it directs users to the Mediterranean Category landing page
-- Salads: Box shadow darkens when hovered over. When clicked, it directs users to the Salads Category landing page
-- Sides: Box shadow darkens when hovered over. When clicked, it directs users to the Sides Category landing page
-- Other: Box shadow darkens when hovered over. When clicked, it directs users to the Other Category landing page
+- Asian Card: Box shadow darkens when hovered over. When clicked, it directs users to the Asian Category landing page.
+- American Card: Box shadow darkens when hovered over. When clicked, it directs users to the American Category landing page.
+- Mediterranean Card: Box shadow darkens when hovered over. When clicked, it directs users to the Mediterranean Category landing page.
+- Salads Card: Box shadow darkens when hovered over. When clicked, it directs users to the Salads Category landing page.
+- Sides Card: Box shadow darkens when hovered over. When clicked, it directs users to the Sides Category landing page.
+- Other Card: Box shadow darkens when hovered over. When clicked, it directs users to the Other Category landing page.
 
 ### ***3. Category Landing Page:***
 
@@ -357,13 +363,13 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 
 ### ***4. Recipe Page:***
 
--   When a user clicks on the 'See Recipe' button (either from the list on the Category landing page or a generated list on the Search page), they are taken to the recipe.html page which is populated with information from the database on the chosen recipe. This information is broken into the four sections: Description, Info, Ingredients, Steps:
+-   When a user clicks on the 'See Recipe' button (either from the list on the Category landing page,a generated list on the Search page, or their My Recipes), they are taken to the recipe.html page which is populated with information from the database on the chosen recipe. This information is broken into the four sections: Description, Info, Ingredients, Steps:
 
     <img src="static/screenshots/recipe-page-example.jpg" alt="recipe-page-example">
 
 - 'Edit Recipe' button: Box shadown darkens when hovered over. When clicked, it directs users to the Edit Recipe page. 
 
-- 'Delete Recipe' button: Box shadown darkens when hovered over. When clicked, it directs users to the Edit Recipe page.
+- 'Delete Recipe' button: 
 
     - Box shadown darkens when hovered over. When clicked, it reveals the confirm delete section. 
 
@@ -400,15 +406,21 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 
     <img src="static/screenshots/remove-step-button1.jpg" alt="remove-step-button"> <img src="static/screenshots/remove-step-button2.jpg" alt="remove-step-button">
 
-- Upon clicking 'Add Recipe' once all required fields are filled, the user will be see a flash message telling them their recipe was successfully added. Their recipe is added to the Mongodb database.
+- If a user does not complete any input field, they will not be able to proceed with submitting the recipe and will be prompted to complete the relevant field. This was tested on every field on the form. (Example in the screenshot below where a user has not completed the "Time" field before clicking submit)
+    
+    <img src="static/screenshots/missing-field-warning.jpg" alt="missing-field-warning"> 
+
+- Upon clicking 'Add Recipe' once all required fields are completed, the user will be see a flash message telling them their recipe was successfully added. Their recipe is added to the Mongodb database.
 
     <img src="static/screenshots/recipe-added-flash-message.jpg" alt="flash-message"> <img src="static/screenshots/recipe-form.jpg" alt="recipe-form"> 
     
     <img src="static/screenshots/recipe-on-mongodb.jpg" alt="recipe-on-mongodb">
 
-- Adding recipe to mongodb will generate the recipe on the relevant category landing page. Clicking 'See Recipe' will generate the recipe.html populated with the recip information stored on mongodb.
 
-    <img src="static/screenshots/recipe-generated1.jpg" alt="recipe-on-category-page"> <img src="static/screenshots/recipe-generated2.jpg" alt="recipe-on-recipe-page">
+- Adding the recipe to Mongodb will generate the recipe on the relevant Category landing page and the user's My Recipe page. Clicking 'See Recipe' will generate the recipe.html populated with the recip information stored on mongodb.
+
+    <img src="static/screenshots/recipe-generated1.jpg" alt="recipe-on-category-page"> <img src="static/screenshots/recipe-generated3.jpg" alt="recipe-on-myrecipe-page">
+    <img src="static/screenshots/recipe-generated2.jpg" alt="recipe-on-recipe-page">
 
 
 ### ***5. Edit Recipe Page:***
@@ -441,8 +453,28 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 
     <img src="static/screenshots/recipe-udpdated-flash-message.jpg" alt="recipe-udpdated-flash-message"> <img src="static/screenshots/recipe-updated-on-mongodb.jpg" alt="recipe-updated-on-mongodb"> 
 
-- The changes made to the updated recipe are also applied to the recipe page once the recipe has been updated on the mongodb database.
+- The changes made to the updated recipe are also applied to the recipe page once the recipe has been updated on the Mongodb database.
 
     <img src="static/screenshots/updated-recipe-example.jpg" alt="updated-recipe-example"> 
 
 - Alternatively, upon clicking the 'Cancel Update' update, the user is redirected to the hompeage and no changes are made to the recipe. 
+
+
+### ***6. Search Recipe Page:***
+
+- When a user clicks on the 'Search Recipe' button on the Homepage or 'Search' link on the navbar, they are taken to the Search Recipe page.
+- After user inputs text into the search box - 'Search button': Box shadow darkens when hovered hover. When clicked, generates a list of recipes that include the word(s) inputted into search box; generates a feedback message on the inputted word(s) and how many results have appeared. (In the screenshot example, the user has typed "feta" into the searchbox and hit the search button).
+
+    <img src="static/screenshots/search-results-feta.jpg" alt="search-results-feta">
+
+- When a user clicks on a recipe from the generated list of results, it reveals the recipe's "description" section, which includes the 'See Recipe' button (the 'Edit' and 'Delete' buttons only appear for those recipes that have been added by the logged in user, see more in sections G and H of Users Stories Testing). Clicking the 'See Recipe' button brings them directly to the Recipe page.
+
+    <img src="static/screenshots/search-results-open.jpg" alt="search-results-open">
+
+- 'Reset' button: Box shadow darkens when hovered hover. When clicked, it clears all search results and feedback messages. 
+
+    <img src="static/screenshots/clear-search-results.jpg" alt="clear-search-results">
+
+- If a word(s) is inputted that does not generate any results, users are informed that zero results have been found.
+
+    <img src="static/screenshots/zero-search-results.jpg" alt="zero-search-results">
