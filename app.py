@@ -47,7 +47,7 @@ def register():
         mongo.db.users.insert_one(register)
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
-        flash("Registration Successful!")
+        flash("Registration successful")
         return redirect(url_for("index"))
 
     return render_template("register.html")
@@ -64,18 +64,18 @@ def login():
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {} let's get cooking!".format(
+                    flash("Welcome {}. Let's get cooking!".format(
                         request.form.get("username")))
                     return redirect(url_for(
                         "index", username=session["user"]))
             else:
                 # passord isn't correct
-                flash("Incorrect Username and/or Password")
+                flash("Incorrect username and/or password")
                 return redirect(url_for("login"))
 
         else:
             # username isn't correct
-            flash("Incorrect Username and/or Password")
+            flash("Incorrect username and/or password")
             return redirect(url_for("login"))
     return render_template("login.html")
 
@@ -130,7 +130,7 @@ def add_recipe():
         }
 
         mongo.db.recipes.insert_one(recipe)
-        flash("Your recipe was successfully added!")
+        flash("Your recipe was successfully added")
         return redirect(url_for("add_recipe"))
 
     categories = list(mongo.db.categories.find())
@@ -155,7 +155,7 @@ def edit_recipe(recipe_id):
             "added_by": session["user"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
-        flash("Recipe successfully updated !")
+        flash("Recipe successfully updated")
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     steps = recipe["steps"]
