@@ -478,3 +478,61 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 - If a word(s) is inputted that does not generate any results, users are informed that zero results have been found.
 
     <img src="static/screenshots/zero-search-results.jpg" alt="zero-search-results">
+
+### ***7. Register Page:***
+
+- When a user clicks on the 'Register' button on the Homepage or 'Register' link on the navbar, they are taken to the Register page.
+
+- After the user completes all input fields: 'Register' button:  Box shadow darkens when hovered hover. When clicked, redirects user to Homepage where a flash message is generated to say their registration has been successful. 
+
+    <img src="static/screenshots/registration-form.jpg" alt="registration-form"> <img src="static/screenshots/registration-complete.jpg" alt="registration-complete">
+
+- Clicking the 'Register' button also sends user details to the MongoDB database for storage. 
+
+    <img src="static/screenshots/user-added-mongodb.jpg" alt="registration-form">
+
+- The registered user is now logged in and will have access to the 'Profile' and 'Add Recipe' links on the Navbar. 
+ 
+    <img src="static/screenshots/full-navbar.jpg" alt="full-navbar">
+
+- If a user does not complete any input field, they will not be able to proceed with registration and will be prompted to complete the relevant field. This was tested on every field on the form. (Example in the screenshot below where a user has not completed the "Last Name" field before clicking submit)
+
+    <img src="static/screenshots/missing-registration-field.jpg" alt="missing-registration-field">
+
+- If the user chooses a username that already exists for another registered user, they will be unable to proceed with the registration. A flash message will inform them that the "Username already exists", prompting them to choose another username.
+
+    <img src="static/screenshots/username-exists.jpg" alt="username-exists">
+
+- In the event that an already-registered user lands on the registration page - Log In link at bottom of registration form: When clicked, redirects users to the the Log In page.
+
+    <img src="static/screenshots/login-prompt.jpg" alt="login-prompt">
+
+### ***8. Log In Page:***
+
+- When a user clicks on the 'Log In' button on the Homepage or 'Log In' link on the navbar, they are taken to the Log In page.
+
+- After user completes all input fields: 'Log In' button:  Box shadow darkens when hovered hover. When clicked, checks to see if username and password are correct. If correct, user is directed to Homepage where a flash message is generated to say their login has been successful. The user is now logged in and will have access to the 'Profile' and 'Add Recipe' links on the Navbar. 
+
+    <img src="static/screenshots/login-form.jpg" alt="login-form"> <img src="static/screenshots/login-complete.jpg" alt="login-complete">
+
+- If a user does not complete any input field, they will not be able to proceed with Log In and will be prompted to complete the relevant field. This was tested on every field on the form. (Example in the screenshot below where a user has not completed the "username" field before clicking submit)
+
+    <img src="static/screenshots/missing-login-field.jpg" alt="missing-login-field">
+
+- If the user inputs an incorrect username and/or password, they will be unable to proceed with loggin in. A flash message will inform them that they have inputted an "Incorrect Username and/or Password", prompting them to resubmit their credentials again.
+
+    <img src="static/screenshots/incorrect-password.jpg" alt="incorrect-password">
+
+- In the event that a non-registered user lands on the Log In page - Registration link at bottom of Log In form: When clicked, redirects users to the the Register page.
+
+    <img src="static/screenshots/register-prompt.jpg" alt="register-prompt">
+
+### ***9. Log Out:***
+
+- Logged in users can log out by clicking on the 'Log Out' link in the Profile section of the Navbar.
+
+    <img src="static/screenshots/log-out-link.jpg" alt="log-out-link">
+
+- 'Log Out' link: When clicked, logs user out of the session, redirects user to the Homepage where a flash message informs them that they have logged out successfully. Access to 'Profile' and 'Add Recipe' links on the Navbar disappear as user is now logged out.
+
+    <img src="static/screenshots/logout-complete.jpg" alt="logout-complete">
