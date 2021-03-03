@@ -67,7 +67,7 @@
                     <!-- Select Time -->
                     <div class="col-12 col-md-4">
                         <select class="browser-default custom-select mb-4 shadow" 
-                            aria-label="select time" name="time">
+                            aria-label="select time" name="time" required>
                             <option value="" disabled selected>Total Time</option>
                             <option value="5">5 mins</option>
                             <option value="10">10 mins</option>
@@ -98,7 +98,7 @@
                     <!-- Select Level -->
                     <div class="col-12 col-md-4">
                         <select class="browser-default custom-select mb-4 shadow" name="level"
-                            aria-label="select level">
+                            aria-label="select level" required>
                             <option value="" disabled selected>Difficulty Level</option>
                             {% for level in levels %}
                             <option value="{{ level.difficulty_level }}">{{ level.difficulty_level|capitalize }}
@@ -122,7 +122,7 @@
                     </div>
                 </div>
                 <small class="form-text text-muted mb-4">
-                    Click + to add more, or – to delete
+                    Click + to add more, or – to delete.
                 </small>
                 <!-- Steps Input -->
                 <strong><label class="mt-1">Steps</label></strong>
