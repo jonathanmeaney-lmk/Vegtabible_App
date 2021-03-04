@@ -12,22 +12,22 @@ $(document).ready(function () {
  
     // Remove last ingredient input added on add/edit recipe form:
     $(".remove-ingr").click(function () {
-        $(".ingredient-input").last().remove()
+        $(".ingredient-input").last().remove();
     });
 
     // Remove last step input on added add/edit recipe form:
     $(".remove-step").click(function () {
-        $(".step-input").last().remove()
+        $(".step-input").last().remove();
     });
 
     // Show confirm (yes/no) delete buttons when delete recipe button is pressed:
     $(".delete-btn").click(function() {
-        $(this).next().show()
+        $(this).next().show();
     });
 
     // Hide confirm (yes/no) delete buttons when "No" button is pressed:
     $(".cancel-delete-btn").click(function() {
-        $(this).parent().hide()
+        $(this).parent().hide();
     });
         
 });
