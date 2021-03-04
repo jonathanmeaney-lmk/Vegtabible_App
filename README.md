@@ -536,3 +536,17 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 - 'Log Out' link: When clicked, logs user out of the session, redirects user to the Homepage where a flash message informs them that they have logged out successfully. Access to 'Profile' and 'Add Recipe' links on the Navbar disappear as user is now logged out.
 
     <img src="static/screenshots/logout-complete.jpg" alt="logout-complete">
+
+### <u>**Validation**</u>
+
+W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the code in the project to ensure there were no errors.
+
+- [W3C Markup Validator](https://validator.w3.org/)
+    - No errors were detected in any of the HTML code after finally running the code through the validator.
+
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+    - No errors in the CSS code were detected after finally running the CSS code through the validator.
+
+- [JSHint](https://jshint.com/)
+    - No errors were detected in the Javascript code after finally running the code through JSHint.
+
