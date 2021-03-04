@@ -22,14 +22,14 @@
                     <div class="card z-depth-2 bordered">
                         <div class="card-header" id="heading{{ loop.index }}" data-toggle="collapse"
                             data-target="#collapse{{ loop.index }}" aria-expanded="false" role="button"
-                            aria-controls="collapse">
+                            aria-controls="collapse" aria-label="toggle recipe desicription">
                         <!-- Recipe Title -->
                             <h6 class="mb-0 collapsed category-recipe-titles">
                                 {{ recipe.recipe_title|title }} <i class="fas fa-caret-down left"></i>
                             </h6>
                         </div>
                         <!-- Toggle to show/hide Recipe Description Section -->
-                        <div id="collapse{{ loop.index }}" class="collapse" aria-label="toggle recipe desicription"
+                        <div id="collapse{{ loop.index }}" class="collapse" 
                             data-parent="#accordionExampleheading{{ loop.index }}">
                             <!-- Recipe Description -->
                             <div class="card-body">
@@ -43,7 +43,7 @@
                                     class="btn text-white info-color btn-sm btn-rounded"><i class="fas fa-edit left"></i>EDIT</a>
                                 <!-- Delete Recipe Button -->
                                 <button type="button" class="delete-btn btn text-white btn-danger btn-sm btn-rounded"><i
-                                        class="fas fa-trash-alt left" aria-label="delete recipe"></i>DELETE</button>
+                                        class="fas fa-trash-alt left"></i>DELETE</button>
                                 <!-- Confirm Delete Yes / No Buttons -->
                                 <div class="confirm-delete-box ml-2 mt-1">
                                     Are you sure you want to delete? <br class="d-block d-lg-none">

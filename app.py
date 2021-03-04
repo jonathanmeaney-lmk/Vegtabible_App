@@ -1,6 +1,6 @@
 import os
 from flask import (
-    Flask, flash, render_template, 
+    Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -62,12 +62,13 @@ def login():
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome {}. Let's get cooking!".format(
-                        request.form.get("username")))
-                    return redirect(url_for(
-                        "index", username=session["user"]))
+                    existing_user["password"], request.form.get(
+                        "password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome {}. Let's get cooking!".format(
+                    request.form.get("username")))
+                return redirect(url_for(
+                    "index", username=session["user"]))
             else:
                 # passord isn't correct
                 flash("Incorrect username and/or password")
