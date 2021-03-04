@@ -542,11 +542,25 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the code in the project to ensure there were no errors.
 
 - [W3C Markup Validator](https://validator.w3.org/)
+
     - No errors were detected in any of the HTML code after finally running the code through the validator.
 
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+
     - No errors in the CSS code were detected after finally running the CSS code through the validator.
 
+        <img src="static/screenshots/css-validation.jpg" alt="css-validation">
+
 - [JSHint](https://jshint.com/)
-    - No errors were detected in the Javascript code after finally running the code through JSHint.
+
+    - No errors were detected in the Javascript/JQuery code after finally running the code through JSHint.
+
+        <img src="static/screenshots/js-validation.jpg" alt="js-validation">
+
+- [PEP8 Code Checker](http://pep8online.com/)
+
+    - No PEP8 errors were detected in the Python code after finally running the code through the PEP8 code Checker
+
+        <img src="static/screenshots/pep8-validation.jpg" alt="pep8-validation">
+
 
