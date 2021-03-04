@@ -24,14 +24,14 @@
                     <div class="card z-depth-2 bordered">
                         <div class="card-header" id="heading{{ loop.index }}" data-toggle="collapse"
                             data-target="#collapse{{ loop.index }}" aria-expanded="false" role="button"
-                            aria-controls="collapse{{ loop.index }}">
+                            aria-controls="collapse">
                         <!-- Recipe Title -->
                             <h6 class="mb-0 collapsed category-recipe-titles">
                                 {{ recipe.recipe_title|title }} <i class="fas fa-caret-down left"></i>
                             </h6>
                         </div>
                         <!-- Toggle to show/hide Recipe Description Section -->
-                        <div id="collapse{{ loop.index }}" class="collapse" aria-labelledby="toggle recipe desicription"
+                        <div id="collapse{{ loop.index }}" class="collapse" aria-label="toggle recipe desicription"
                             data-parent="#accordionExample{{ loop.index }}">
                             <!-- Recipe Description -->
                             <div class="card-body">
