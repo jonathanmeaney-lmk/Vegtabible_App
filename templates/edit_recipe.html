@@ -23,7 +23,7 @@
                     <!-- Choose Category -->
                     <div class="col-12">
                         <select class="browser-default custom-select mb-4 shadow" name="category_name" aria-label="choose category" required>
-                            <option value="" disabled selected>Choose Category</option>
+                            <option value="" disabled>Choose Category</option>
                             {% for category in categories %}
                             {% if category.category_name == recipe.category_name %}
                             <option value="{{ category.category_name }}" selected>
@@ -104,7 +104,7 @@
                     <div class="col-12 col-md-4">
                         <select class="browser-default custom-select mb-4 shadow" name="level" 
                             aria-label="select level" required>
-                            <option value="" disabled selected>Difficulty Level</option>
+                            <option value="" disabled>Difficulty Level</option>
                             {% for level in levels %}
                             {% if level.difficulty_level == recipe.difficulty_level %}
                             <option value="{{ level.difficulty_level }}" selected>
