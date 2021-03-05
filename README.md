@@ -564,26 +564,6 @@ W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the cod
         <img src="static/screenshots/pep8-validation.jpg" alt="pep8-validation">
 
 
-## **DEPLOYMENT**
------
-
-### <strong>Development</strong> 
-
--   The intial wireframes for the project were created using Balsamic and can be viewed here: [normal](assets/wireframes/just-phrasal-wireframes.pdf); [mobile](assets/wireframes/just-phrasal-mobile-wireframes.pdf)
--   The project was developed using the [Gitpod online IDE](https://www.gitpod.io/).
--   The project was regularly commited using the Git command line interface on Gitpod.
--   After each commit, the project was pushed to Github for deployment.
-
-### <strong>GitHub Pages</strong> 
-
-The project was deployed to GitHub Pages using the following steps...
-
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/jonathanmeaney-lmk/Just-Phrasals)
-2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-4. Under "Source", click the dropdown called "None" and select "Master Branch" and save.
-5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](https://jonathanmeaney-lmk.github.io/Just-Phrasals/) in the "GitHub Pages" section.
 
 ## **DESIGN, DEVELOPMEN & DEPLOYMENT**
 -----
@@ -596,8 +576,14 @@ The project was deployed to GitHub Pages using the following steps...
 
 ### <strong>Development</strong> 
 
--   The project was developed using the [Gitpod online IDE](https://www.gitpod.io/).
--   HTML, CSS, JavaScript, Python and Flask framework were used to develop the project, with the main python-based code to run the app being stored in a file called 'app.py'.
+-   First, a repository for the project was created on GitHub, which is connected to the [Gitpod online IDE](https://www.gitpod.io/).
+-   The project was developed using the Gitpod online IDE.
+-   HTML, CSS, JavaScript, Python and the Flask Python framework were used to develop the project, with the main python-based code to run the app being stored in a file called 'app.py'.
+-   An env.py was created to store all important neccesary envrinomental variables to run the project and to connect the project to the MongoDB database.
+
+    <img src="static/screenshots/env-py.jpg" alt="env-py">
+
+-   The env.py file was added to the .gitignore file to ensure these envrinomental variables are not pushed to Github.
 -   The project was regularly commited using the Git command line interface on Gitpod.
 -   After each commit, the project was pushed to Github for deployment.
 
@@ -607,29 +593,29 @@ The project was deployed through HEROKU via GitHub. Outline of the deployment pr
 
 1. Before creating a Heroku app, a requirements.txt file was created in the project on the Gitpod IDE in order to tell Heroku what applications and dependencies are required to run the Vegtabible app.
 2. The requirements.txt file was created by typing <strong><em>pip3 freeze -- local > requirements.txt</em></strong> in the Git command line interface on Gitpod.
-3. A Procfile was created so Heroku knows which files run the app and how to run it. 
-4. The Procfile was created by typing <strong><em>echo web: python app.py > Profile</em></strong> in the Git command line interface on Gitpod. The first screenshot shows the Procfile and requirements.txt files added to the project; the second shows the contents of the requirements.txt file, listing the dependencies and application that Heroku needs to run the app.
+3. A Procfile was created so Heroku knows which files it needs to run the app and how to run it. 
+4. The Procfile was created by typing <strong><em>echo web: python app.py > Profile</em></strong> in the Git command line interface on Gitpod. The first screenshot shows the Procfile and requirements.txt files added to the project; the second shows the contents of the requirements.txt file, listing the dependencies and applications that Heroku needs to run the app.
 
     <img src="static/screenshots/procfile-requirements.jpg" alt="procfile-requirements"> <img src="static/screenshots/requirements-txt.jpg" alt="requirements-txt">
 
-5. NB: The Procfile file contains one line: <strong><em> web: python app.py</em></strong>. It is importante to delete any lines below it and then save to avoid any issues with the app running on Heroku.
+5. NB: The Procfile file contains one line: <strong><em> web: python app.py</em></strong>. It is importante to delete any lines below the first line and then save to avoid any issues with the app running on Heroku.
 
     <img src="static/screenshots/procfile.jpg" alt="procfile">
 
-6. At this point, the app can now be created on HEROKU by choosing the Create New App option from the User dashboard. In this case, the app was named "vegtabible.app".
-7. Once the app was created, the Heroku project was configured to connect with GitHub in order to allow automatic deployment from a GitHub repository.
+6. At this point, the app can now be created on HEROKU by choosing the 'Create New App' option from the User dashboard. In this case, the app was named "vegtabible.app".
+7. Once the app was created, the Heroku project was configured to connect with GitHub in order to allow automatic deployment from the GitHub repository.
 8. To do this, Github was chosen as the Deployment Method from the 'Deploy' section of the Heroku project.
-9. Under the Deployment Method, the Github user and Github repository name are chosen in the Connect to Github section. Clicking search located the Github repo, and clicking 'Connect', connects Heroku project to the chosen Github repo.
+9. Under the Deployment Method, the Github user and Github repository name are chosen in the Connect to Github section. Clicking 'Search' locates the Github user and repo, then clicking 'Connect', connects Heroku project to the Github repo.
 
     <img src="static/screenshots/heroku-github-connect.jpg" alt="heroku-github-connect">
 
-10. Before clicking the "Enable Automatic Deploy" button that will allow the project be automatically deployed from the GitHub repository, it is neccessary to input the hidden environmet variables from the project's "env.py" file so Heroku can run the app. As this env.py file has been included in the gitignore file, it will not be pushed to Github and so it's contents must entered manually on Heroku.
-11. This is done by clicking the "Reveal Config Vars" on the Setting secton of the Heroku project. The relevant key and value from the env.py file can be added here. 
+10. Before clicking the 'Enable Automatic Deploy' button that will allow the project to be automatically deployed from the GitHub repository, it is neccessary to input the hidden environmet variables from the project's "env.py" file so Heroku can run the app. As this env.py file has been included in the gitignore file, it will not be pushed to Github and so it's contents must entered manually on Heroku.
+11. This is done by clicking the 'Reveal Config Vars' button on the Settings secton of the Heroku project. The relevant keys and values from the env.py file can be added here. 
 
     <img src="static/screenshots/env-py.jpg" alt="env-py"> <img src="static/screenshots/config-vars-heroku.jpg" alt="config-vars-heroku">
 
-12. After this, return to the Gitpod IDE and push the requirements.txt file and Procfile to the Github repository. Once the files have been pushed to the Github repository, return to the Deploy section of the Heroku project and click "Enable Automatic Deploy" button followed by "Deploy Branch"  button to complete of automatically deploying from the GitHub repository to Heroku. 
-13. From this point, Heroku will recieve the code from Github and can build the app using the required packages listed in the requirements.txt file. All changes pushed to Github during development and will also be pushed to Heroku.
+12. After this, return to the Gitpod IDE and push the requirements.txt file and Procfile to the Github repository. Once the files have been pushed to the Github repository, return to the Deploy section of the Heroku project and click 'Enable Automatic Deploy' button followed by the 'Deploy Branch'  button to complete the process of automatically deploying from the GitHub repository to Heroku. 
+13. From this point, Heroku will recieve the code from Github and can build the app using the required packages listed in the requirements.txt file. All changes pushed to Github during development will also be subsequently pushed to Heroku.
 14. Now that the app is successfully deploying on Heroku via GitHub, the live project can accessed on Heroku by clicking the 'Open App' button located on the top right of the project page on Heroku. 
 
     <img src="static/screenshots/open-app-heroku.jpg" alt="open-app-heroku"> 
