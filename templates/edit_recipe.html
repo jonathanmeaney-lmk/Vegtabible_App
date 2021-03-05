@@ -80,8 +80,7 @@
                             <option value="{{ recipe.total_time }}" selected>
                                 {{ recipe.total_time }}</option>
                             {% else %}
-                            <option value="n">{{ n }}
-                            </option>
+                            <option value="{{ n }}">{{ n }} mins</option>
                             {% endif %}     
                             {% endfor %} 
                         </select>
@@ -121,7 +120,7 @@
                     </div>
                 </div>
                 <small class="form-text text-muted text-center mb-4">
-                    Click + to add more
+                    Click + to add more, or – to delete.
                 </small>
                 <!-- Steps Input -->
                 <strong><label class="mt-1">Steps</label></strong>
