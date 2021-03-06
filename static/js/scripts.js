@@ -3,11 +3,13 @@ $(document).ready(function () {
     // Add ingredient input on add/edit recipe form:
     $(".add-ingr").click(function () {
         $(".ingredient").append(' <input class="form-control form-control-md shadow mb-1 ingredient-input" name="ingredients" type="text" minlength="3" aria-label="step input" placeholder="Ingredient"> ');
+        $(".remove-ingr").show();
     });
 
     // Add step input on add/edit recipe form:
     $(".add-step").click(function () {
         $(".step").append(' <input class="form-control form-control-md shadow mb-1 step-input" name="steps" type="text" minlength="3" aria-label="step input" placeholder="Step"> ');
+        $(".remove-step").show();
     });
  
     // Remove last ingredient input added on add/edit recipe form:

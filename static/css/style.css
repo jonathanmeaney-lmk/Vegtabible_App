@@ -155,7 +155,8 @@ h4 {
 
 .remove-ingr {
     font-size: 30px;
-    color: #ff5e5e
+    color: #ff5e5e;
+    display: none;
 }
 
 .add-step {
@@ -166,6 +167,7 @@ h4 {
 .remove-step {
     font-size: 30px;
     color: #ff5e5e;
+    display: none;
 }
 
 
