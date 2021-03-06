@@ -64,7 +64,7 @@
                             <option value="{{ recipe.servings }}" selected>
                                 {{ recipe.servings }}</option>
                             {% else %}
-                            <option value="n">{{ n }}
+                            <option value="{{ n }}">{{ n }}
                             </option>
                             {% endif %}     
                             {% endfor %} 
@@ -105,7 +105,7 @@
                 <!-- Ingedients Input -->
                 <strong><label>Ingredients</label></strong>
                 <div class="row">
-                    <div class="col-10 ingredient">
+                    <div class="col-12 ingredient">
                         {% for ingredient in ingredients %}
                         <input class="form-control form-control-md shadow mb-1 ingredient-input" name="ingredients"
                             type="text" placeholder="Ingredient" minlength="3" value="{{ ingredient }}" 
@@ -113,33 +113,26 @@
                         {% endfor %}
                     </div>
                     <!-- Add / Delete Ingedient Input Buttons -->
-                    <div class="col-1">
-                        <button type="button" class="add-ingr shadow mb-1" aria-label="add ingredient">
-                            <i class="fas fa-plus"></i></button>
-                        <i role="button" class="fas fa-minus-circle remove-ingr shadow" aria-label="remove ingredient"></i>
+                    <div class="col-12 col-lg-2 mt-2 mb-3">
+                        <i role="button" class="fas fa-plus-circle add-ingr" aria-label="add ingredient"></i>
+                        <i role="button" class="fas fa-times-circle remove-ingr ml-1" aria-label="remove ingredient"></i>
                     </div>
                 </div>
-                <small class="form-text text-muted text-center mb-4">
-                    Click + to add more, or – to delete.
-                </small>
                 <!-- Steps Input -->
                 <strong><label class="mt-1">Steps</label></strong>
                 <div class="row">
-                    <div class="col-10 step">
+                    <div class="col-12 step">
                         {% for step in steps %}
                         <input class="form-control form-control-md shadow mb-1 step-input" name="steps" type="text"
                             placeholder="Step" minlength="3" value="{{ step }}" aria-label="step input" required>
                         {% endfor %}
                     </div>
                     <!-- Add / Delete Step Input Buttons -->
-                    <div class="col-1">
-                        <button type="button" class="add-step shadow mb-1" aria-label="add step"><i class="fas fa-plus"></i></button>
-                        <i role="button" class="fas fa-minus-circle remove-step shadow" aria-label="remove step"></i>
+                    <div class="col-12 col-lg-2 mt-2 mb-4">
+                        <i role="button" class="fas fa-plus-circle add-step" aria-label="add ingredient"></i>
+                        <i role="button" class="fas fa-times-circle remove-step ml-1" aria-label="remove ingredient"></i>
                     </div>
                 </div>
-                <small class="form-text text-muted mb-4">
-                    Click + to add more. No need to put step numbers!
-                </small>
                 <!-- Submit / Cancel Buttons -->
                 <div class="row">
                     <div class="col-12">

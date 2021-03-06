@@ -146,45 +146,28 @@ h4 {
     border-radius: 10px
 }
 
-.add-ingr {
-    background-color: #33b5e5;
-    border: none;
-    color: rgb(232, 232, 232);
-    border-radius: 15px;
-}
-
 /* Add/Remove Step/Ingredient Input Buttons */
 
+.add-ingr {
+    font-size: 30px;
+    color: #33b5e5;
+}
+
+.remove-ingr {
+    font-size: 30px;
+    color: #ff5e5e
+}
+
 .add-step {
-    background-color: #33b5e5;
-    border: none;
-    color: rgb(232, 232, 232);
-    border-radius: 15px;
+    font-size: 30px;
+    color: #33b5e5;
 }
 
-.add-ingr:hover {
-    background-color: #58d0fc;
-    color: rgb(232, 232, 232);
-    border-radius: 15px;
-}
-
-.add-step:hover {
-    background-color: #58d0fc;
-    color: rgb(232, 232, 232);
-    border-radius: 15px;
-}
-
-.fa-minus-circle {
-    font-size: 27px;
-    color: #ff4444;
-    background-color: rgb(230, 230, 230);
-}   
-
-.fa-minus-circle:hover {
-    font-size: 27px;
+.remove-step {
+    font-size: 30px;
     color: #ff5e5e;
-    background-color: rgb(230, 230, 230);
-} 
+}
+
 
 /* ........................ Category Cards on Homepage */
 
