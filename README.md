@@ -565,16 +565,27 @@ W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the cod
 
 
 
-## **DESIGN, DEVELOPMEN & DEPLOYMENT**
+## **DESIGN, DEVELOPMENT & DEPLOYMENT**
 -----
 
-### <strong>Interface Design</strong> 
+### **<u>Interface Design</u>** 
 
 -   The intial wireframes for the project were created using Balsamic and can be viewed here: 
 
-### <strong>Database Design</strong> 
+### **<u>Database Design</u>**  
 
-### <strong>Development</strong> 
+- A non-relational database model was chosen and the database was created on MongoDB.
+- The database is broken up into four collections: Recipes, Categories, Levels and Users.
+- Each collection is made up of data objects, with each object made up of a series of fields, with string, integers and list values.
+- Users of the website will only be able to add data objects to the Recipes and Users collections; the Category and Levels Collections are fixed and only used to populate fields in Recipe objects of the Recipes collection. 
+- The Recipes collection is the main database collection and is connected to the other three collections. The other three collections are not connected to each other (see Database Schema below).
+- The Recipes collection is made up of a Recipe Objects, with each Recipe object containing several fields. Three of those fields (category, level, and added_by) will be taken from the other collections (see Database Schema below).
+
+    <img src="static/screenshots/database-schema.png" alt="database-schema"> 
+
+
+
+### **<u>Development</u>** 
 
 -   First, a repository for the project was created on GitHub, which is connected to the [Gitpod online IDE](https://www.gitpod.io/).
 -   The project was developed using the Gitpod online IDE.
@@ -587,7 +598,7 @@ W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the cod
 -   The project was regularly commited using the Git command line interface on Gitpod.
 -   After each commit, the project was pushed to Github for deployment.
 
-### <strong>Deployment</strong> 
+### **<u>Deployment</u>**  
 
 The project was deployed through HEROKU via GitHub. Outline of the deployment process: 
 
