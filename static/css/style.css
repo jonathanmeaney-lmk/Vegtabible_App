@@ -12,7 +12,7 @@
 }
 
 .navbar-brand:hover {
-    font-size: 35px;
+    text-decoration: underline;
 }
 
 .navbar {
