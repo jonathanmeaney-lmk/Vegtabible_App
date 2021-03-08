@@ -22,6 +22,7 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 - **Edit recipes:** users can edit and update recipes using a simple form. 
 - **Delete recipes:** users can also delete recipes when necessary, perhaps in the event that a meat-based recipe is accidentally added which is not suitable. 
 
+
 ## **UX**
 
 ---
@@ -109,9 +110,10 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 - [Heroku:](https://www.heroku.com/)
     - Heroku is used to deploy the project to the web and is linked to the GitHub repo (see more in Deployment section)
 - [MongoDB:](https://www.mongodb.com/)
-    - MongoDB is used to design and create a database, where all recipe data is stored at the backend.
+    - MongoDB is used to design and create the database, where all recipe and user data is stored at the backend.
 - [Balsamiq:](https://balsamiq.com/)
     - Balsamiq was used to create the wireframes during the design process.
+
 
 ## **TESTING**
 ---
@@ -305,7 +307,7 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
 
 - Vegtabible logo: When clicked, it returns users to the homepage
 - Login/Register Popup Menu: Changes color when hovered over. When clicked, it opens the popop menu showing the Login/Register links.
-- Login/Register links: Log In link directs users Log In page when clicked. Register link directs users to Log In page when clicked.
+- Login/Register links: Log In link directs users Log In page when clicked. Register link directs users to Register page when clicked.
 - 'Search Recipe' link: Changes color when hovered over. When clicked, it directs users to the Search Recipe page.
 - 'Add Recipe' link: Changes color when hovered over. When clicked, it directs users to the Add Recipe page.
 - Categories Popup Menu: Changes color when hovered over. When clicked, it opens the popop menu showing the six category links.
@@ -417,7 +419,7 @@ From handwritten notes, printed-out sheets and cookbooks, to recipes bookmarked 
     <img src="static/screenshots/recipe-on-mongodb.jpg" alt="recipe-on-mongodb">
 
 
-- Adding the recipe to Mongodb will generate the recipe on the relevant Category landing page and the user's My Recipe page. Clicking 'See Recipe' will generate the recipe.html populated with the recip information stored on mongodb.
+- Adding the recipe to Mongodb will generate the recipe on the relevant Category landing page and the user's My Recipe page. Clicking 'See Recipe' will generate the recipe.html populated with the recipe information stored on mongodb.
 
     <img src="static/screenshots/recipe-generated1.jpg" alt="recipe-on-category-page"> <img src="static/screenshots/recipe-generated3.jpg" alt="recipe-on-myrecipe-page">
     <img src="static/screenshots/recipe-generated2.jpg" alt="recipe-on-recipe-page">
@@ -555,14 +557,12 @@ W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the cod
 
     - No errors were detected in the Javascript/JQuery code after finally running the code through JSHint.
 
-        <img src="static/screenshots/js-validation.jpg" alt="js-validation">
 
 - [PEP8 Code Checker](http://pep8online.com/)
 
     - No PEP8 errors were detected in the Python code after finally running the code through the PEP8 code Checker
 
         <img src="static/screenshots/pep8-validation.jpg" alt="pep8-validation">
-
 
 
 ## **DESIGN, DEVELOPMENT & DEPLOYMENT**
@@ -609,7 +609,7 @@ The project was deployed through HEROKU via GitHub. Outline of the deployment pr
 
     <img src="static/screenshots/procfile-requirements.jpg" alt="procfile-requirements"> <img src="static/screenshots/requirements-txt.jpg" alt="requirements-txt">
 
-5. NB: The Procfile file contains one line: <strong><em> web: python app.py</em></strong>. It is importante to delete any lines below the first line and then save to avoid any issues with the app running on Heroku.
+5. NB: The Procfile file contains one line: <strong><em> web: python app.py</em></strong>. It is important to delete any lines below the first line and then save to avoid any issues with the app running on Heroku.
 
     <img src="static/screenshots/procfile.jpg" alt="procfile">
 
@@ -620,7 +620,7 @@ The project was deployed through HEROKU via GitHub. Outline of the deployment pr
 
     <img src="static/screenshots/heroku-github-connect.jpg" alt="heroku-github-connect">
 
-10. Before clicking the 'Enable Automatic Deploy' button that will allow the project to be automatically deployed from the GitHub repository, it is neccessary to input the hidden environmet variables from the project's "env.py" file so Heroku can run the app. As this env.py file has been included in the gitignore file, it will not be pushed to Github and so it's contents must entered manually on Heroku.
+10. Before clicking the 'Enable Automatic Deploy' button that will allow the project to be automatically deployed from the GitHub repository, it is neccessary to input the hidden environmet variables from the project's "env.py" file so Heroku can run the app. As this env.py file has been included in the gitignore file, it will not be pushed to Github and so it's contents must be entered manually on Heroku.
 11. This is done by clicking the 'Reveal Config Vars' button on the Settings secton of the Heroku project. The relevant keys and values from the env.py file can be added here. 
 
     <img src="static/screenshots/env-py.jpg" alt="env-py"> <img src="static/screenshots/config-vars-heroku.jpg" alt="config-vars-heroku">
@@ -637,7 +637,7 @@ The project was deployed through HEROKU via GitHub. Outline of the deployment pr
 
 ### **Images:**
 
-- Several images were taken from the pPxabay website:
+- The following images were taken from the Pixabay website:
     - https://pixabay.com/photos/tomato-tomatoes-vegetables-red-eat-4481200/
     - https://pixabay.com/photos/flat-lay-food-salad-diet-healthy-2583212/
     - https://pixabay.com/photos/flat-lay-food-salad-diet-healthy-2583212/
@@ -656,7 +656,9 @@ The project was deployed through HEROKU via GitHub. Outline of the deployment pr
 ### **Code:**
 
 - The navbar, buttons, toggle, and some other elements were created using [MDBootstrap](https://mdbootstrap.com/).
+- Most of python code in the app.py file is based on the Code Institute Task Manager walkthrough project.
 
 ### **Content:** 
 
 - Some of the recipes on the site have been taken from the BBC Good Food website just for demonstration purposes.
+
