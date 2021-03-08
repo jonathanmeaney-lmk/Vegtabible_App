@@ -43,10 +43,10 @@
             <div class="col-12 col-md-3 recipe-panel grey lighten-4 shadow offset-1">
                 <h4>Info <i class="fas fa-info-circle"></i></h4>
                 <p class="shadow">
-                    <i class="far fa-clock" aria-label="time"></i> {{ recipe.total_time }} mins<br>
+                    <i class="far fa-clock"></i><span class="sr-only">Time</span> {{ recipe.total_time }} mins<br>
                     <i class="fas fa-users"></i> {{ recipe.servings }} servings<br>
-                    <i class="far fa-folder-open" aria-label="category"></i> {{ recipe.category_name|capitalize }}<br>
-                    <i class="fas fa-layer-group" aria-label="level"></i> {{ recipe.difficulty_level|capitalize }}</p>
+                    <i class="far fa-folder-open"></i><span class="sr-only">Category</span> {{ recipe.category_name|capitalize }}<br>
+                    <i class="fas fa-layer-group"></i><span class="sr-only">Level</span> {{ recipe.difficulty_level|capitalize }}</p>
             </div>
         </div>
         <div class="row justify-content-center">
