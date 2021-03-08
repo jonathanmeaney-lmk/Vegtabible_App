@@ -570,7 +570,7 @@ W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the cod
 
 ### **<u>Interface Design</u>** 
 
--   The intial wireframes for the project were created using Balsamic and can be viewed here: 
+-   The intial wireframes for the project were created using Balsamic and can be viewed here: [normal](static/wireframes/wireframes-large-screen.pdf); [mobile](static/wireframes/wireframes-mobile.pdf)
 
 ### **<u>Database Design</u>**  
 
