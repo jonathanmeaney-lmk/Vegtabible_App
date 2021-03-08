@@ -89,16 +89,17 @@ def logout():
     return redirect(url_for("index"))
 
 
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
+# render search page
 @app.route("/search_page")
 def search_page():
     return render_template("search_page.html")
 
 
-@app.route("/contact")
-def contact():
-    return render_template("contact.html")
-
-
+# search bar function
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
