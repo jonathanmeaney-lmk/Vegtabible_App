@@ -632,3 +632,31 @@ The project was deployed through HEROKU via GitHub. Outline of the deployment pr
     <img src="static/screenshots/open-app-heroku.jpg" alt="open-app-heroku"> 
 
 
+## **CREDITS**
+-----
+
+### **Images:**
+
+- Several images were taken from the pPxabay website:
+    - https://pixabay.com/photos/tomato-tomatoes-vegetables-red-eat-4481200/
+    - https://pixabay.com/photos/flat-lay-food-salad-diet-healthy-2583212/
+    - https://pixabay.com/photos/flat-lay-food-salad-diet-healthy-2583212/
+    - https://pixabay.com/photos/flat-lay-food-salad-diet-healthy-2583212/
+    - https://pixabay.com/photos/flat-lay-food-salad-diet-healthy-2583212/
+    - https://pixabay.com/photos/flat-lay-food-salad-diet-healthy-2583212/
+
+- The following images were taken from Adobe Stock:
+    - https://stock.adobe.com/fi/images/child-and-grandmother-in-the-garden-with-vegetables-in-their-hands-selective-focus/330714951
+    - https://stock.adobe.com/fi/images/traditional-indian-dish-chickpea-chana-masala-with-rice-and-flatbread/303058099
+    - https://stock.adobe.com/fi/images/vegan-tortillas-with-quinoa-asparagus-beans-vegetables-and-guacamole/272430607
+    - https://stock.adobe.com/fi/images/clean-eating-vegan-healthy-salad-bowl-closeup-woman-holding-salad-bowl-plant-based-healthy-diet-with-greens-chickpeas-and-vegetables/310645058
+    - https://stock.adobe.com/fi/images/child-and-grandmother-in-the-garden-with-vegetables-in-their-hands-selective-focus/330714951
+
+
+### **Code:**
+
+- The navbar, buttons, toggle, and some other elements were created using [MDBootstrap](https://mdbootstrap.com/).
+
+### **Content:** 
+
+- Some of the recipes on the site have been taken from the BBC Good Food website just for demonstration purposes.
