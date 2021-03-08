@@ -78,7 +78,7 @@
                             {% for n in range(5,185,5) %}
                             {% if recipe.total_time == n %}
                             <option value="{{ recipe.total_time }}" selected>
-                                {{ recipe.total_time }}</option>
+                                {{ recipe.total_time }} mins</option>
                             {% else %}
                             <option value="{{ n }}">{{ n }} mins</option>
                             {% endif %}     
