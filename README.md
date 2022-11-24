@@ -1,6 +1,6 @@
 <h1 align="center"><strong>Vegtabible App</strong></h1>
 
-[View live project here](https://vegtabible-app.herokuapp.com/index)
+[View live project here](https://vegtabible.onrender.com)
 
 **The recipe bible for vegetarians and "part-time" veggies.**
 
